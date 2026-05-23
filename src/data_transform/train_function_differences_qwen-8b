@@ -1,0 +1,2500 @@
+[
+  {
+    "sample_idx": 0,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Good evening. I hope I'm not too late? This sudden rain made me realize I need a more reliable weapon for night missions.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Not at all. The summer evenings are long, and rainy weather often brings unexpected challenges. What type of weapon interests you?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I've been using basic daggers, but they're not ideal when visibility is poor. Any suggestions for a magic user?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Consider the Long Bow. It allows you to maintain safe distance, especially useful in poor visibility conditions.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "a more reliable weapon for night missions|Ideal when visibility is poor|something for a magic user"
+          },
+          "return": [
+            {
+              "item_name": "Long Bow",
+              "reason": "It enables you to keep a safe distance, which is particularly beneficial in low visibility situations."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I recommend the **Long Bow**. It allows you to stay at a safe distance, which is crucial in low visibility. Would you like to equip it?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "a more reliable weapon for night missions|Ideal when visibility is poor|something for a magic user",
+            "item_type": "magic"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 0,
+    "turn": "turn_5",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Good evening. I hope I'm not too late? This sudden rain made me realize I need a more reliable weapon for night missions.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Not at all. The summer evenings are long, and rainy weather often brings unexpected challenges. What type of weapon interests you?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I've been using basic daggers, but they're not ideal when visibility is poor. Any suggestions for a magic user?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Consider the Long Bow. It allows you to maintain safe distance, especially useful in poor visibility conditions.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "A bow in the rain? I'm concerned about the bowstring's reliability in this weather.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "A valid concern. Our Long Bows are treated to withstand moisture, and they excel at striking distant targets even in challenging conditions.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "The distance advantage would be helpful during these stormy summer nights. What's the price?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "The Long Bow is 300G. Very reasonable for the advantages it provides.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That's perfect for my budget. I'll take it.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Here's your Long Bow. I've included a waxed string cover for extra protection against the rain.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Would it be alright to test it now? I'd like to get a feel for it before heading back out in this weather.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Certainly. Let me adjust the string tension for you - it needs to be just right in this humidity.",
+      "functions": []
+    },
+    "model": {
+      "response": "Of course! Test it outside. Just be careful with the rain.",
+      "functions": [
+        {
+          "name": "check_description",
+          "parameters": {
+            "item_name": "Long Bow"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 3,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I am looking to buy a weapon for an upcoming battle. What would you recommend?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Ah, well that will depend on what type of weapon you need. We carry single and double-handed swords, axes, spears, bows, whips, and a selection of blunt weapons.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "a weapon for an upcoming battle"
+          },
+          "return": [
+            {
+              "information": "many"
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I have many options for you. If you're facing a group of enemies, the *Battle Axe* or *Morning Star* would be great. For ranged combat, the *Avis Wind* or *Long Bow* are excellent. If you prefer close combat, the *Demonic Sword* or *Zwei Hander* are powerful. Which type of battle are you preparing for?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "for an upcoming battle"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 6,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm here today to look for a new weapon. I'm looking for a single-handed sword that's lightweight. Do you have anything like that?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Oh, of course. What size are you thinking? I have everything from knives to longswords.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Single-Handed Sword",
+            "item_description": "something that's lightweight"
+          },
+          "return": [
+            {
+              "information": "many"
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I have several options. Let me check... Yes, we have a few lightweight single-handed swords. Here are some examples: Short Sword, Light-Weight Durable Knife, and Man Gauche. Would you like more details on any of these?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Single-Handed Sword",
+            "item_description": "lightweight"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 6,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm here today to look for a new weapon. I'm looking for a single-handed sword that's lightweight. Do you have anything like that?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Oh, of course. What size are you thinking? I have everything from knives to longswords.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Well, I haven't decided on the size yet, but I'm looking for something with an attack power over 15.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "I see. If you're looking for a single-handed sword with over 15 attack power, I have three options. The Long Sword, Dragon Cutter, and Demonic Sword.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Single-Handed Sword",
+            "item_description": "something that's lightweight",
+            "item_attack": "15",
+            "item_attack_operator": "more than"
+          },
+          "return": [
+            {
+              "item_name": "Long Sword",
+              "reason": "Its attack is 20. Its type is Single-Handed Sword."
+            },
+            {
+              "item_name": "Dragon Cutter",
+              "reason": "Its attack is 70. Its type is Single-Handed Sword."
+            },
+            {
+              "item_name": "Demonic Sword",
+              "reason": "Its attack is 75. Its type is Single-Handed Sword."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found a few options for you. The Long Sword has an attack of 20, the Dragon Cutter has 70, and the Demonic Sword has 75. Which one would you like to try?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Single-Handed Sword",
+            "item_description": "lightweight",
+            "item_attack": "15",
+            "item_attack_operator": "more than"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 7,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a new sword today. My budget is 1000G, any suggestions?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "A budget of 1000G? Sure, I have a few candidates. What features do you want to focus on? Lightness, strength, or looks?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "If I had to choose, I'd say lightweight is key. As you can see, I'm always carrying a lot of gear, so I need something that won't get in the way.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "In that case, let me show you two options: the foldable 'Light-Weight Durable Knife' and the simple yet effective 'Man Gauche'.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "lightweight|something that won't get in the way when carrying a lot of gear.",
+            "item_price": "1000G",
+            "item_price_operator": "or less",
+            "item_type": "Sword"
+          },
+          "return": [
+            {
+              "item_name": "Light-Weight Durable Knife",
+              "reason": "Its price is 10 Gold. Its type is Single-Handed Sword. This knife can be folded."
+            },
+            {
+              "item_name": "Man Gauche",
+              "reason": "Its price is 100 Gold. Its type is Single-Handed Sword. This is straightforward but efficient."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found two options for you. The Light-Weight Durable Knife costs 10G and is easy to carry. The Man Gauche is 100G and is efficient for defense. Would you like to buy either of these?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "lightweight|something that won't get in the way when carrying a lot of gear.",
+            "item_price": "1000G",
+            "item_price_operator": "less than",
+            "item_type": "Sword"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 8,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a weapon that can defeat many enemies all at once. It needs to have an attack power of over 80.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "A weapon with high attack power that can defeat multiple enemies at once. That's going to be a bit of an investment. What's your budget, if you don't mind me asking?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "a weapon that can defeat many enemies all at once. ",
+            "item_attack": "80",
+            "item_attack_operator": "more than"
+          },
+          "return": [
+            {
+              "information": "many"
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "You're in luck! I have several options. The **Morning Star**, **Hell Chain**, and **Zwei Hander** can take out multiple enemies at once. Would you like to see them?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "a weapon that can defeat many enemies all at once.",
+            "item_attack": "80",
+            "item_attack_operator": "more than"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 8,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a weapon that can defeat many enemies all at once. It needs to have an attack power of over 80.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "A weapon with high attack power that can defeat multiple enemies at once. That's going to be a bit of an investment. What's your budget, if you don't mind me asking?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "My budget is 8000 G. I'm hoping to find something that meets those requirements within that range.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Got it, with that budget in mind, I believe we have one solid option. This here is the Hell Chain Whip.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "a weapon that can defeat many enemies all at once. ",
+            "item_attack": "80",
+            "item_attack_operator": "more than",
+            "item_price": "8000 G",
+            "item_price_operator": "or less"
+          },
+          "return": [
+            {
+              "item_name": "Hell Chain",
+              "reason": "Its price is 8000 Gold. Its attack is 80."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found one perfect for you. The **Hell Chain** costs exactly 8000 G and has an attack power of 80. It’s a whip that moves like it's alive, great for taking out multiple enemies. Would you like to equip it now?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "a weapon that can defeat many enemies all at once",
+            "item_attack": "80",
+            "item_attack_operator": "more than",
+            "item_price": "8000 G",
+            "item_price_operator": "or less"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 8,
+    "turn": "turn_5",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a weapon that can defeat many enemies all at once. It needs to have an attack power of over 80.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "A weapon with high attack power that can defeat multiple enemies at once. That's going to be a bit of an investment. What's your budget, if you don't mind me asking?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "My budget is 8000 G. I'm hoping to find something that meets those requirements within that range.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Got it, with that budget in mind, I believe we have one solid option. This here is the Hell Chain Whip.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "The name certainly sounds intense, doesn't it? Hell Chain... it seems like a weapon meant for some serious action. Can you tell me the price and the attack power?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "It's priced at 8000 G and has an attack power of 80.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Adapting to the user's hand, huh? So, you're saying it can move as freely as my own hand? That sounds impressive.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You're right. It's made from a special material that gives it high quality. All you need to do is focus on what you want to do, channel your strength, and it moves just the way you intend it to. It's almost like an extension of your own hand.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That's incredible... it sounds like the perfect weapon. If it moves with me like that, it could really make a difference in battle. I'll take it.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Thank you for your purchase. I'm sure this will serve you well in your travels. Here you go. Would you like to equip it now, or do you prefer to take it with you?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I'll equip it now, actually. I want to see how it feels in my hands right away. Got any tips for mastering this weapon?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Got it. You're equipped. I'd recommend you take some time to practice with it before heading into any real battle. It's a powerful weapon, but you'll want to get used to how it moves in your hands.",
+      "functions": [
+        {
+          "name": "equip",
+          "parameters": {
+            "item_name": "Hell Chain"
+          },
+          "return": []
+        },
+        {
+          "name": "check_description",
+          "parameters": {
+            "item_name": "Hell Chain"
+          },
+          "return": [
+            {
+              "description": "### Power and Effectiveness\\n- A whip that moves as if it's alive. It adapts to the user's hand, eliminating multiple monsters at once. "
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "Equip it and feel the flow. Focus on your movements, and let the chain guide you. Practice with it, and you'll master it in no time. Good luck, adventurer!",
+      "functions": [
+        {
+          "name": "check_description",
+          "parameters": {
+            "item_name": "Hell Chain"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 9,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a sword today. My Budget is 1000G. Do you have anything that fits?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "For your budget, we have a few options. If you want something lightweight but still effective in combat, we can go with a couple of choices. What type of weapon are you looking for? Something quick and light, or something with a bit more weight?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Well, I'd prefer something light, but I need it to be effective for defense and offense. Something versatile, I guess.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "I see. In that case, I'd recommend the Light-Weight Durable Knife for light, quick defense. It's compact and easy to carry, perfect for self-defense.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_description": "something light, but effective for defense and offense.",
+            "item_price": "1000G",
+            "item_price_operator": "or less",
+            "item_type": "Sword"
+          },
+          "return": [
+            {
+              "item_name": "Light-Weight Durable Knife",
+              "reason": "Its price is 10 Gold. Its type is Single-Handed Sword. This is a lightweight and fast defensive tool. It's small and portable, ideal for self-defense."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "How about the **Long Sword**? It’s light enough to handle quickly, yet powerful for both defense and offense. It’s perfect for versatile combat. Would you like to purchase it?",
+      "functions": []
+    }
+  },
+  {
+    "sample_idx": 9,
+    "turn": "turn_6",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a sword today. My Budget is 1000G. Do you have anything that fits?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "For your budget, we have a few options. If you want something lightweight but still effective in combat, we can go with a couple of choices. What type of weapon are you looking for? Something quick and light, or something with a bit more weight?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Well, I'd prefer something light, but I need it to be effective for defense and offense. Something versatile, I guess.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "I see. In that case, I'd recommend the Light-Weight Durable Knife for light, quick defense. It's compact and easy to carry, perfect for self-defense.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "A knife. I've used them before, but I'm looking for something with more reach. Something I can swing more easily.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You might be interested in the Short Sword or Long Sword.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Right. And what's the attack power of the Long Sword, compared to the Short Sword?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "The Long Sword has an attack power of 20, so it's definitely stronger than the Short Sword, which has 15.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I see, so the Long Sword has a bit more power. But what about the Short Sword? Can you tell me more about it?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course. The Short Sword is a lightweight, easy-to-handle weapon. It's great for quick thrusts and stabbing, and it's ideal if you're looking for something nimble but still effective in close combat.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Understand. The Short Sword isn't bad at all. If there are any other options, I'd like to hear about them.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Sure. there is one more option. It's a Man Gauche, a very easy-to-handle dagger. and it's quick and light, making it great for both offense and defense.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Got it. What is the attack power compared to the Light-Weight Durable Knife?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Man Gauche has an attack power of 10 and the Light-Weight Durable Knife has 5. Therefore, the Man Gauche has slightly higher attack power.",
+      "functions": [
+        {
+          "name": "check_attack",
+          "parameters": {
+            "item_name": "Light-Weight Durable Knife"
+          },
+          "return": [
+            {
+              "attack": "5"
+            }
+          ]
+        },
+        {
+          "name": "check_attack",
+          "parameters": {
+            "item_name": "Man Gauche"
+          },
+          "return": [
+            {
+              "attack": "10"
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "The Man Gauche has an attack power of 10, same as the Light-Weight Durable Knife.",
+      "functions": [
+        {
+          "name": "check_attack",
+          "parameters": {
+            "item_name": "Man Gauche"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 11,
+    "turn": "turn_5",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Today, I'm searching for a sword within a budget of 1500. What do you recommend?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "With that budget, we have a few excellent options. I just want to make sure at the outset that you are looking for a basic sword rather than a knife-like dagger?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Yes, that's I want. Do you have some kind?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "I understand. Then I can introduce you to three types of swords. They are the Short Sword, Long Sword, and Two-Handed Sword.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds useful. Easy to handle is a fundamentally important point. How about next one?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Next, it's a Long Sword with a thick blade. It is relatively light in weight so you can take a swing. It is longer than the short sword and can attack a wider range of enemies.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I see. It certainly has a blade that looks sharp. And, what's the last option?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Last one is a Two-Handed Sword. It's one of double-handed swords, heavy but delivers devastating power. It is suited for attacking enemies and cutting them up.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Interesting. The Two-Handed Sword sounds powerful. But is it practical for adventuring?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "It's great for strong opponents but requires both hands, so If you want to fight light, I can't say it'd be the best choice.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I thought so too. Okay, I'd go with the Long Sword. This would allow me to move quick and make sure I defeat enemies, right?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Thanks for your purchase. I think it's a good choice. It's an effective weapon because it's light but shaped to transmit power easily. Would you like to equip it on right now?",
+      "functions": [
+        {
+          "name": "sell",
+          "parameters": {
+            "item_name": [
+              "Long Sword"
+            ]
+          },
+          "return": []
+        },
+        {
+          "name": "check_description",
+          "parameters": {
+            "item_name": "Long Sword"
+          },
+          "return": [
+            {
+              "description": "#### Durability and Craftsmanship\\n- Durable and well-crafted.\\n- Basic care guide for its blade.\\n\\n#### Weight and Balance\\n- Relatively light in weight.\\n- Lighter than the Demonic Sword.\\n- Heavier than the Short Sword but still light.\\n- Well-balanced for quick strikes.\\n- Provides a good balance of power and agility, allowing faster movements.\\n\\n#### Length and Reach\\n- Longer than the Short Sword.\\n- Thicker and longer blade than the Short Sword.\\n- Offers more power and reach than the Short Sword.\\n- Can attack a wider range of enemies.\\n\\n#### Combat Use\\n- Ideal for open combat.\\n- Suitable for both close and slightly longer encounters.\\n- Good for light combat but might struggle against tougher enemies.\\n- Effective against weaker enemies with great maneuverability.\\n- Ideal for sweeping swings.\\n- Provides a strong swing.\\n- Transmits power easily.\\n- Perfect for quick, decisive strikes.\\n\\n#### Recommendations\\n- Recommended over the Light-Weight Durable Knife or the Man Gauche for more offensive use.\\n- A solid choice for basic combat, though not ideal for taking down huge monsters quickly. "
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "Exactly! The Long Sword gives you good balance between speed and power. Let me get it ready for you. Would you like to equip it now?",
+      "functions": [
+        {
+          "name": "check_description",
+          "parameters": {
+            "item_name": "Long Sword"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 12,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm in need of a spear for my next journey. Can you show me what you have?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Certainly! Before we begin, do you have any specific conditions or preferences?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Spear"
+          },
+          "return": [
+            {
+              "information": "many"
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I have several spears available. Let me show you the options. Here are some spears: Lance, Trident, Zephyr, and Zwei Hander. Each has its own strengths. Would you like more details on any of these?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "spear"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 12,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm in need of a spear for my next journey. Can you show me what you have?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Certainly! Before we begin, do you have any specific conditions or preferences?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "No limits on the budget. I'm not familiar with the different types of spears, so I'd appreciate it if you could introduce each option to me one by one.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Understood. The three types that we have are the Lance, Trident, and Zephyr.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Spear",
+            "item_price": "no limit"
+          },
+          "return": [
+            {
+              "item_name": "Lance",
+              "reason": "Its price is 300 Gold. Its type is Spear."
+            },
+            {
+              "item_name": "Trident",
+              "reason": "Its price is 1000 Gold. Its type is Spear."
+            },
+            {
+              "item_name": "Zephyr",
+              "reason": "Its price is 10000 Gold. Its type is Spear."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "Here are the spears I have:\n\n1. **Lance**: A basic spear. Good for poking or hitting.\n2. **Trident**: A spear with three sharp ends. Light and used for spearing.\n3. **Zephyr**: A light spear said to be protected by the God of Thunder. High striking power.\n4. **Rope**: A simple rope with hardened tips. Used for swinging and giving decent damage.\n\nWould you like more details about any of these?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "spear",
+            "item_price_operator": "no limit"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 13,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a blunt weapon that can handle multiple enemies at once. My budget is 10,000.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Blunt weapons, you say? You're in luck. I've got two options that fit your needs. The Morning Star and the Bloody Saint Cross.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Blunt Weapon",
+            "item_description": "Something that can handle multiple enemies at once. ",
+            "item_price": "10000",
+            "item_price_operator": "or less"
+          },
+          "return": [
+            {
+              "item_name": "Morning Star",
+              "reason": "Its price is 300 Gold. Its type is Blunt Weapon."
+            },
+            {
+              "item_name": "Bloody Saint Cross",
+              "reason": "Its price is 9000 Gold. Its type is Blunt Weapon."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found two options for you. The Morning Star costs 300 Gold and is great for hitting multiple enemies. The Bloody Saint Cross is priced at 9000 Gold and is believed to possess dark power. Would you like to equip either of these?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Blunt Weapon",
+            "item_description": "Something that can handle multiple enemies at once.",
+            "item_price": "10000",
+            "item_price_operator": "or less"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 14,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a sword. Something practical but within a budget of 1500 gold. What do you have?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Ah, swords! I've got a few that fit your needs. Let's see... Would you prefer a single-handed or a double-handed sword?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_price": "1500 gold",
+            "item_price_operator": "or less",
+            "item_type": "Sword"
+          },
+          "return": [
+            {
+              "information": "many"
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I have several practical swords under 1500 gold. Let me show you. Here are some options: Long Sword, Short Sword, and Man Gauche. Which one would you like to try?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Sword",
+            "item_price": "1500 gold",
+            "item_price_operator": "or less",
+            "item_description": "Something practical"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 17,
+    "turn": "turn_3",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking to buy a double-handed sword. What options do you have?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "We have a couple of excellent options. The Two-Handed Sword, and the more powerful blade called the Zwei Hander. Which one would you like to hear about first?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I'd like to hear about the Two-Handed Sword please. What's unique about it?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course. The two-handed sword is sturdy and well-balanced, great for slicing through enemies. It's a dependable choice for most adventurers.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Sounds solid. Can you tell me more about its stats and price?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course. It has an attack level of 60 and costs 1200 gold. Its long, thick blade makes it effective for combat while being easy to handle.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Not bad at all. I'll definitely consider it. What about the Zwei Hander? Do you think it's better?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "The Zwei Hander is in a league of its own. It's a massive blade built for warriors seeking unmatched power. It boasts an attack level of 90, and it's priced at 9000 gold.",
+      "functions": [
+        {
+          "name": "check_basic_info",
+          "parameters": {
+            "item_name": "Zwei Hander"
+          },
+          "return": [
+            {
+              "type": "Double-Handed Sword",
+              "price": "9000 Gold",
+              "attack": "90",
+              "description": "A huge double-handed sword . It can take down many enemies with a single swing but requires a lot of power to handle. "
+            }
+          ]
+        },
+        {
+          "name": "check_basic_info",
+          "parameters": {
+            "item_name": "Two-Handed Sword"
+          },
+          "return": [
+            {
+              "type": "Double-Handed Sword",
+              "price": "1200 Gold",
+              "attack": "60",
+              "description": "A double-handed sword with a long and thick blade. It is suited for attacking enemies and cutting them up."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "The Zwei Hander is more powerful, with an attack level of 90 and a price of 9000 gold. It can take down many enemies with one swing, but it requires more strength to wield. It's ideal for experienced warriors.",
+      "functions": [
+        {
+          "name": "check_basic_info",
+          "parameters": {
+            "item_name": "Zwei Hander"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 18,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a lightweight single-handed sword. It should have an attack power of at least 10, and my budget is 500 gold.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Let me see... Ah, I've got a couple of options that should work for you. We have the Short Sword and the Man Gauche.",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Single-Handed Sword",
+            "item_attack": "10",
+            "item_attack_operator": "or more",
+            "item_price": "500 gold",
+            "item_price_operator": "or less"
+          },
+          "return": [
+            {
+              "item_name": "Short Sword",
+              "reason": "Its price is 300 Gold. Its attack is 15. Its type is Single-Handed Sword."
+            },
+            {
+              "item_name": "Man Gauche",
+              "reason": "Its price is 100 Gold. Its attack is 10. Its type is Single-Handed Sword."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "Here are two options for you: the **Short Sword** with an attack of 15 for 300 Gold, and the **Man Gauche** with an attack of 10 for 100 Gold. Both are lightweight and fit your criteria. Would you like to equip either one?",
+      "functions": [
+        {
+          "name": "search_item",
+          "parameters": {
+            "item_type": "Single-Handed Sword",
+            "item_attack": "10",
+            "item_attack_operator": "or more",
+            "item_price": "500 gold",
+            "item_price_operator": "or less",
+            "item_description": "lightweight"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 19,
+    "turn": "turn_6",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for something that can help me take down multiple enemies at once. What do you have?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Hmm, you're in luck. I have a few weapons that could serve you well. There is the Morning Star and the Hell Chain. The Morning Star is designed for crowd control.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "A Morning Star, huh? That's a cool name. I'd like to hear more information about it, if possible.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "It's a blunt weapon with an iron ball on a chain. It has a powerful swing, making it perfect for striking multiple foes. It'll cost you 300.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Hm, that sounds like it could do the job. How does it handle in combat?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "It's all about momentum. The chain allows for wide sweeps, hitting more than one target at a time. It's very effective in close-quarter combat.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I see. What about the other weapons? You said there are other options too, right?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "If you're willing to stretch your budget, there's the Hell Chain, a whip that eliminates enemies with ease. However, it's much more expensive. It costs 8000 gold.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Too expensive for now, but I'll keep it in mind. How does the Morning Star compare in weight? I need something I can handle easily.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "The Morning Star's fairly heavy, but it's not too much for someone with your build. It's all about the swing.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I guess I'll go with the Morning Star, then. It fits my budget, and I think I can make it work.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "A solid choice. The Morning Star is reliable and powerful weapon. You wont regret it.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "If it's a weapon you're selling I'm sure I wont. Here you go, 300 gold.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Thank you for your purchase! Here's your Morning Star. Would you like to equip it now?",
+      "functions": [
+        {
+          "name": "sell",
+          "parameters": {
+            "item_name": [
+              "Morning Star"
+            ]
+          },
+          "return": []
+        }
+      ]
+    },
+    "model": {
+      "response": "Thank you, adventurer. Here is your Morning Star. Now, would you like to equip it?",
+      "functions": [
+        {
+          "name": "sell",
+          "parameters": {
+            "item_names": [
+              {
+                "item": "Morning Star"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 20,
+    "turn": "turn_3",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'd appreciate some advice for my upcoming journey. Any recommendations or travel tips you could share?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course! Could you tell me your destination and if you have any specific interests? I'd be happy to offer tailored suggestions.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I'm considering the Commercial Escort quest. Do you have any insights for an experienced adventurer like me?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Ah, the Commercial Escort quest. You'll be escorting a trading party to a neighboring town. There have been reports of monsters lurking around the streets recently.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I see. What exactly is my role in this? Do I need to lead the party or something?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Definitely. Your role is to escort the party safely to its destination.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Got it. How many days should we plan for this? I'd like to hear your thoughts on how to prepare.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "This quest will take 7 days to complete. I'd recommend preparing for the monsters along the way.",
+      "functions": [
+        {
+          "name": "check_duration",
+          "parameters": {
+            "quest_name": "Commercial Escort"
+          },
+          "return": [
+            {
+              "duration": "7 days"
+            }
+          ]
+        },
+        {
+          "name": "check_description",
+          "parameters": {
+            "quest_name": "Commercial Escort"
+          },
+          "return": [
+            {
+              "description": "### Quest Description\\n- A trading party will head out to a neighboring town. Monsters have recently been reported to be seen on the streets. You are to escort the party safely to its destination.\\n- Traveling in a convoy adds extra protection and responsibility.\\n- Compared to the Collecting Dragon Teardrops, this quest is more likely to result in success for the average adventurer.\\n- It could give you the opportunity to protect a group rather than just slay creatures.\\n- It’s a little safer than the abandoned building, but still requires vigilance.\\n- It challenges you in a unique way. It’s all about pushing your limits.\\n- It will test your ability to handle unexpected threats while protecting others.\\n- It has been popular among adventurers looking for steady rewards.\\n\\n### Monster Information\\n- The monsters stalk passersby.\\n- The monsters appear suddenly.\\n- The monsters are not too powerful individually.\\n- There are 3 monsters hiding along the way. They will ambush you and attack simultaneously. You will need to battle all 3 of them at the same time.\\n- You need to stay sharp for the 3 monsters that will ambush you along the way.\\n- You’ll need to be strategic and ready for a tough battle.\\n\\n### Tips and Strategy\\n- Always keep your weapon well-maintained. A sharp blade is as important as your skill with it.\\n- No matter how strong and brave you are, you never know what might happen on the battlefield, and sometimes retreating might be necessary.\\n- You should rely on good tools in order to see fewer tragic sacrifices."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "The quest will take approximately 7 days. Be prepared for ambushes by 3 monsters at once. Bring strong weapons and enough supplies.",
+      "functions": [
+        {
+          "name": "check_duration",
+          "parameters": {
+            "quest_name": "Commercial Escort"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 20,
+    "turn": "turn_4",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'd appreciate some advice for my upcoming journey. Any recommendations or travel tips you could share?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course! Could you tell me your destination and if you have any specific interests? I'd be happy to offer tailored suggestions.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I'm considering the Commercial Escort quest. Do you have any insights for an experienced adventurer like me?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Ah, the Commercial Escort quest. You'll be escorting a trading party to a neighboring town. There have been reports of monsters lurking around the streets recently.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I see. What exactly is my role in this? Do I need to lead the party or something?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Definitely. Your role is to escort the party safely to its destination.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Got it. How many days should we plan for this? I'd like to hear your thoughts on how to prepare.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "This quest will take 7 days to complete. I'd recommend preparing for the monsters along the way.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Thank you. Then, how should we approach this quest? I would like to join this quest.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "So, you've decided on the ‘Commercial Escort' quest. Is that correct?",
+      "functions": [
+        {
+          "name": "select_request_confirm",
+          "parameters": {
+            "quest_name": "Commercial Escort"
+          },
+          "return": []
+        },
+        {
+          "name": "check_description",
+          "parameters": {
+            "quest_name": "Commercial Escort"
+          },
+          "return": [
+            {
+              "description": "### Quest Description\\n- A trading party will head out to a neighboring town. Monsters have recently been reported to be seen on the streets. You are to escort the party safely to its destination.\\n- Traveling in a convoy adds extra protection and responsibility.\\n- Compared to the Collecting Dragon Teardrops, this quest is more likely to result in success for the average adventurer.\\n- It could give you the opportunity to protect a group rather than just slay creatures.\\n- It’s a little safer than the abandoned building, but still requires vigilance.\\n- It challenges you in a unique way. It’s all about pushing your limits.\\n- It will test your ability to handle unexpected threats while protecting others.\\n- It has been popular among adventurers looking for steady rewards.\\n\\n### Monster Information\\n- The monsters stalk passersby.\\n- The monsters appear suddenly.\\n- The monsters are not too powerful individually.\\n- There are 3 monsters hiding along the way. They will ambush you and attack simultaneously. You will need to battle all 3 of them at the same time.\\n- You need to stay sharp for the 3 monsters that will ambush you along the way.\\n- You’ll need to be strategic and ready for a tough battle.\\n\\n### Tips and Strategy\\n- Always keep your weapon well-maintained. A sharp blade is as important as your skill with it.\\n- No matter how strong and brave you are, you never know what might happen on the battlefield, and sometimes retreating might be necessary.\\n- You should rely on good tools in order to see fewer tragic sacrifices."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "Are you sure you want to proceed with the Commercial Escort quest?",
+      "functions": [
+        {
+          "name": "check_description",
+          "parameters": {
+            "quest_name": "Commercial Escort"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 22,
+    "turn": "turn_5",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a quest that offers a reward of 20G or more. Got anything like that?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Sure! How about Exterminating the Giant Rats or Collecting Dragon Teardrops?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Collecting Dragon Teardrops sounds like a serious challenge. What's the difficulty level on that one? And can you give me all the details about the quest?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "That's an S-level quest, the highest difficulty. You'll have 30 days to locate an Earth Dragon in the mountains and collect one of its tears. Dragon tears are incredibly rare and are used to make a cure-all drug.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "How exactly do I go about collecting a dragon's tear?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You'd need to cut off one of the Earth Dragon's scales. Doing so will make it shed a tear. But you'd need a Dragon Cutter sword to cut through those scales.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Got it. Since I don't have that sword right now, maybe I'll pass on that quest for now. What can you tell me about 'Exterminating the Giant Rats'?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "In this one, you'd be clearing out giant rats in the town's sewer system. You'll need to bring back 100 rat tails. It's a 3-day quest, with reward of 20G, and has a level-A. It's pretty straightforward.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "A rat extermination, huh? Sounds like it would help the town. So, I need to take down a hundred of them?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Yes, but they don't attack back. Just cut off the tails, and they'll vanish.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Alright, so it's all about finding them and taking them down quickly. I've got my sword, and I'm confident in my speed. Are there any other quests that offers a reward of 20G or more?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Yes, some of the other quests that you might want to consider are 'Commercial Escort,' 'Investigating an Abandoned Building,' and 'Hunting Down the Desert Tiger.'",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_name": "Collecting Dragon Teardrops|Exterminating the Giant Rats",
+            "quest_name_operator": "other than"
+          },
+          "return": [
+            {
+              "quest_name": "Commercial Escort",
+              "reason": ""
+            },
+            {
+              "quest_name": "Investigating an Abandoned Building",
+              "reason": ""
+            },
+            {
+              "quest_name": "Hunting Down the Desert Tiger",
+              "reason": ""
+            }
+          ]
+        },
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_reward": "20G",
+            "quest_reward_operator": "or more"
+          },
+          "return": [
+            {
+              "quest_name": "Commercial Escort",
+              "reason": "Its reward is 50."
+            },
+            {
+              "quest_name": "Investigating an Abandoned Building",
+              "reason": "Its reward is 150."
+            },
+            {
+              "quest_name": "Hunting Down the Desert Tiger",
+              "reason": "Its reward is 200."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "Let me check... Yes, there's also \"Investigating an Abandoned Building\" with a reward of 150G. It's a B-level quest. Would you like more details on that one?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_reward": "20G",
+            "quest_reward_operator": "or more",
+            "quest_name_operator": "other than",
+            "quest_name": "Exterminating the Giant Rats"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 23,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I am looking to take on a quest.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "We have quite a few quests open at the moment, what difficulty are you looking for with this quest.",
+      "functions": []
+    },
+    "model": {
+      "response": "Welcome! Here are some quests that match your criteria:  \n1. **Collecting Medical Herbs** (Level B, Reward 5G, Duration 2 hours).  \n2. **Exterminating the Giant Rats** (Level B, Reward 8G, Duration 3 hours).  \n3. **Investigating an Abandoned Building** (Level C, Reward 10G, Duration 6 hours).  \n\nAre you sure you want to choose one of these quests?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level_operator": "average",
+            "quest_reward_operator": "average",
+            "quest_duration_operator": "average"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 23,
+    "turn": "turn_4",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I am looking to take on a quest.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "We have quite a few quests open at the moment, what difficulty are you looking for with this quest.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "To start, I'd prefer something easy. What A difficulty quests are open?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "We have two A level quests at the moment. They are 'Collecting Medical Herbs' and 'Exterminating Giant Rats'",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Can you tell me more information about 'Collecting Medical Herbs'?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Certainly, in this quest you must collect a Miracle Herb that grows in the forest. You need to collect 50 of them to complete the quest and earn 5 gold.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Hmm, let me think about it. What about 'Exterminating Giant Rats'? What does that one entail?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "In this quest, you must exterminate giant rats infesting the town sewerage. You will collect the tails of 100 giant rats in exchange for a reward of 20 gold.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That quest sounds better to me. I would like to select the quest 'Exterminating Giant Rats'.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "You have requested to select the quest 'Exterminating Giant Rats', is this correct.",
+      "functions": [
+        {
+          "name": "select_request_confirm",
+          "parameters": {
+            "quest_name": "Exterminating the Giant Rats"
+          },
+          "return": []
+        }
+      ]
+    },
+    "model": {
+      "response": "Are you sure you want to select the 'Exterminating Giant Rats' quest?",
+      "functions": [
+        {
+          "name": "select_request_confirm",
+          "parameters": {
+            "quest_name": "Exterminating Giant Rats"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 23,
+    "turn": "turn_5",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I am looking to take on a quest.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "We have quite a few quests open at the moment, what difficulty are you looking for with this quest.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "To start, I'd prefer something easy. What A difficulty quests are open?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "We have two A level quests at the moment. They are 'Collecting Medical Herbs' and 'Exterminating Giant Rats'",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Can you tell me more information about 'Collecting Medical Herbs'?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Certainly, in this quest you must collect a Miracle Herb that grows in the forest. You need to collect 50 of them to complete the quest and earn 5 gold.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Hmm, let me think about it. What about 'Exterminating Giant Rats'? What does that one entail?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "In this quest, you must exterminate giant rats infesting the town sewerage. You will collect the tails of 100 giant rats in exchange for a reward of 20 gold.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That quest sounds better to me. I would like to select the quest 'Exterminating Giant Rats'.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You have requested to select the quest 'Exterminating Giant Rats', is this correct.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Yes, I am selecting quest 'Exterminating Giant Rats'.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Thank you for selecting your quest. Would you like to begin the quest now, or start at a later time? If you want to start your quest now, be sure you have the correct weapon equipped and appropriate items in your inventory.",
+      "functions": [
+        {
+          "name": "select",
+          "parameters": {
+            "quest_name": "Exterminating the Giant Rats"
+          },
+          "return": []
+        }
+      ]
+    },
+    "model": {
+      "response": "You have successfully selected the quest 'Exterminating Giant Rats'. Good luck, and feel free to ask if you need any further assistance.",
+      "functions": [
+        {
+          "name": "select",
+          "parameters": {
+            "quest_name": "Exterminating Giant Rats"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 25,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm interested in taking on a Level C quest. Do you have any with a high reward?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Ah, a high reward! Let's see... I have one for you?'Hunting Down the Desert Tiger.' It's a bit of a challenge, but the reward is 200g.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "C",
+            "quest_reward": "high"
+          },
+          "return": [
+            {
+              "quest_name": "Hunting Down the Desert Tiger",
+              "reason": "Its level is C. Its reward is 200."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found a few Level C quests with high rewards. Here are the options:\n\n1. **Collecting Medical Herbs** - Reward: 50G\n2. **Exterminating the Giant Rats** - Reward: 60G\n3. **Investigating an Abandoned Building** - Reward: 70G\n\nAre you sure you want to choose one of these quests?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "C",
+            "quest_reward": "high",
+            "quest_level_operator": "more than",
+            "quest_reward_operator": "more than"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 26,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Hi, I'm looking to take on a quest. Could you help me find one that's a good challenge, but not too overwhelming?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Of course! We have a few quests available at the moment. What kind of challenge are you looking for?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "A|B|C"
+          },
+          "return": [
+            {
+              "information": "many"
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found some moderately difficult quests for you. Here are the options:  \n1. **Collecting Medical Herbs** – Gather 50 Miracle Herbs in the forest.  \n2. **Investigating an Abandoned Building** – Fight undead monsters inside.  \nAre you sure you want to choose one of these?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "moderately difficult"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 26,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Hi, I'm looking to take on a quest. Could you help me find one that's a good challenge, but not too overwhelming?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course! We have a few quests available at the moment. What kind of challenge are you looking for?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Something that'll push me a bit, but not go overboard, so any quests other than S level, I guess.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Let me see... Here are some options for you. There are the 'Investigating an Abandoned Building' quest and 'Collecting Medical Herbs' quest which is level A.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "S",
+            "quest_level_operator": "other than"
+          },
+          "return": [
+            {
+              "quest_name": "Investigating an Abandoned Building",
+              "reason": "Its level is B."
+            },
+            {
+              "quest_name": "Collecting Medical Herbs",
+              "reason": "Its level is A."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found two quests for you: \"Collecting Medical Herbs\" (Level A) and \"Investigating an Abandoned Building\" (Level B). Are you sure you want to choose one of these?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "A",
+            "quest_level_operator": "other than",
+            "quest_description": "push me a bit, but not go overboard"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 29,
+    "turn": "turn_6",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Good evening, I'm looking for a quest I can complete in less than 30 days. Anything that fits?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "We have a few options available. There are Exterminating the Giant Rats and Hunting Down the Desert Tiger. Do you want me to explain about Exterminating the Giant Rats quest first?",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds interesting. What's the reward for this quest? Please tell me what it involves as well.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "The reward is 20 gold for collecting 100 Giant Rat tails. The rats won't attack, but you'll need to gather their tails and bring them back.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "They won't attack, huh? Well that makes things a lot easier. How do I find these rats?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "They're located in the town's sewerage system. It's not far from here, and you'll easily spot them. They're large but harmless.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I see. What about the other quests? Are there any other interesting options that might fit my needs?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "There's the Hunting Down the Desert Tiger quest, which takes 15 days to complete. It requires you to hunt a Desert Tiger in the desert beyond the forest.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That one sounds more challenging. Can you tell me more about it?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Desert Tiger is sensitive to light and will flinch when exposed to it. It's best tackled with a sword in close combat.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Sounds like a fight worth taking on. What about the reward, Is it worth the hassle?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "The reward for clearing Hunting Down the Desert Tiger is 200 gold. For 15 days, that's plenty if you ask me.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "200 gold is indeed a nice amount. Do you think I can get it done within 15 days?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "It won't be an easy task, but with the right amount of preparation, I believe you'll be just fine.",
+      "functions": []
+    },
+    "model": {
+      "response": "It depends on how fast you can track and defeat the Desert Tiger. If you're prepared, it's definitely doable. Are you ready to accept the quest?",
+      "functions": [
+        {
+          "name": "check_duration",
+          "parameters": {
+            "quest_name": "Hunting Down the Desert Tiger"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 31,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Good afternoon. I'm interested in taking on a quest. Could you point me in the right direction?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course! I have a few quests that might interest you. Let me give you a rundown.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds good. What quests do you have available? I'm looking for something challenging.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "One option is Commercial Escort. You'll escort a trading party and face three monster ambushes.",
+      "functions": []
+    },
+    "model": {
+      "response": "I found some A-level quests for you. Here are the options: Collecting Medical Herbs, Exterminating the Giant Rats, and Commercial Escort. Are you sure you want to choose one of these?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "A"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 31,
+    "turn": "turn_2",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Good afternoon. I'm interested in taking on a quest. Could you point me in the right direction?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course! I have a few quests that might interest you. Let me give you a rundown.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds good. What quests do you have available? I'm looking for something challenging.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "One option is Commercial Escort. You'll escort a trading party and face three monster ambushes.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "What is the level and the reward for this quest?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Another option is Investigating an Abandoned Building. There are undead monsters inside an old building.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "B",
+            "quest_level_operator": "more than"
+          },
+          "return": [
+            {
+              "quest_name": "Investigating an Abandoned Building",
+              "reason": "Its level is B. Undead creatures inhabit an old structure."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "The Commercial Escort quest is a B-level quest. The reward is 200 Gold. Would you like to proceed with this quest?",
+      "functions": [
+        {
+          "name": "check_basic_info",
+          "parameters": {
+            "quest_name": "Commercial Escort"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 31,
+    "turn": "turn_5",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "Good afternoon. I'm interested in taking on a quest. Could you point me in the right direction?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Of course! I have a few quests that might interest you. Let me give you a rundown.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds good. What quests do you have available? I'm looking for something challenging.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "One option is Commercial Escort. You'll escort a trading party and face three monster ambushes.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "What is the level and the reward for this quest?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "Another option is Investigating an Abandoned Building. There are undead monsters inside an old building.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Sounds dangerous. Can you give me more information about this quest?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "It's a level B quest, requires 10 days, and offers 150 gold. There are about 10 undead monsters outside, but over 100 more inside. They're not too strong individually, but you'll face them in large numbers.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "I see. How tough is the Commercial Escort quest? What am I up against there?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "In the Commercial Escort quest, you'll guard a trading party. Three monsters will ambush you on your way, and you'll need to fight them all at once.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "How about something at level C or higher? I want a challenging quest with a good reward.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "In that case, we have Hunting Down the Desert Tiger.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "C|challenging",
+            "quest_level_operator": "or above",
+            "quest_reward": "high"
+          },
+          "return": [
+            {
+              "quest_name": "Hunting Down the Desert Tiger",
+              "reason": "Its level is C. Its reward is 200."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found a quest for you: **Hunting Down the Desert Tiger**. It's a **level C** quest with a **reward of 200G**. You’ll need to fight a powerful Desert Tiger in the desert. Are you sure you want to take this quest?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "C",
+            "quest_reward": "high"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 32,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a quest that'll offer a high reward, something that can be completed in 30 days or less.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "Well, we've got Investigating an Abandoned Building.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_reward": "high",
+            "quest_duration": "30 days",
+            "quest_duration_operator": "or less"
+          },
+          "return": [
+            {
+              "quest_name": "Investigating an Abandoned Building",
+              "reason": "Its duration is 10 days. Its reward is 150."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I found a quest for you: *Investigating an Abandoned Building*. It takes 10 days and gives 150 Gold. Are you sure you want to take this quest? If yes, would you like to proceed?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_reward": "high",
+            "quest_duration": "30 days",
+            "quest_duration_operator": "or less",
+            "quest_reward_operator": "high"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 33,
+    "turn": "turn_0",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a quest that's less than 10 days but still challenging, so perhaps a level B quest. Got anything like that?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "In that case, how about the Commercial Escort which is a level B quest.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "challenging|B",
+            "quest_duration": "10 days",
+            "quest_duration_operator": "less than"
+          },
+          "return": [
+            {
+              "quest_name": "Commercial Escort",
+              "reason": "Its level is B. Its duration is 7 days."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "Yes, I found a quest for you. The \"Commercial Escort\" is a level B quest that takes 7 days. You need to protect a trading party from monsters. Are you sure you want to take this quest? If yes, would you like to proceed?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "B",
+            "quest_duration": "10 days",
+            "quest_duration_operator": "less than"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 33,
+    "turn": "turn_3",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a quest that's less than 10 days but still challenging, so perhaps a level B quest. Got anything like that?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "In that case, how about the Commercial Escort which is a level B quest.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "How many days do I need, and what is the reward?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "This quest takes 7 days and offers 50 gold as a reward.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "What's the mission about? Why do those people need to be escorted?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You'll need to escort a trading party through an area known for monster sightings. There will be 3 monsters ambushing you along the way, so you need to stay sharp.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds like a tough challenge. Any other quests that are a bit longer?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "There's another level B quest, Investigating an Abandoned Building.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "challenging|B",
+            "quest_duration": "7 days",
+            "quest_duration_operator": "more than"
+          },
+          "return": [
+            {
+              "quest_name": "Investigating an Abandoned Building",
+              "reason": "Its level is B. Its duration is 10 days."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I have a quest that lasts 10 days and is level B: \"Investigating an Abandoned Building.\" Are you sure you want to choose this quest?",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_duration": "10 days",
+            "quest_duration_operator": "more than",
+            "quest_level": "B",
+            "quest_level_operator": "more than"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 33,
+    "turn": "turn_5",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a quest that's less than 10 days but still challenging, so perhaps a level B quest. Got anything like that?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "In that case, how about the Commercial Escort which is a level B quest.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "How many days do I need, and what is the reward?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "This quest takes 7 days and offers 50 gold as a reward.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "What's the mission about? Why do those people need to be escorted?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You'll need to escort a trading party through an area known for monster sightings. There will be 3 monsters ambushing you along the way, so you need to stay sharp.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds like a tough challenge. Any other quests that are a bit longer?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "There's another level B quest, Investigating an Abandoned Building.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "How many days does it take? What kind of monsters are we dealing with in the abandoned building? Do you know?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "This one takes 10 days. The building is infested with undead monsters. About 10 outside and nearly 100 inside. It's best to strike them in groups since they're not too strong individually.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That could be an interesting challenge. What about something a bit more dangerous, meaning something at a higher level?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "You could try Hunting Down the Desert Tiger.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "B",
+            "quest_level_operator": "more than",
+            "quest_duration": "7 days",
+            "quest_duration_operator": "more than"
+          },
+          "return": [
+            {
+              "quest_name": "Hunting Down the Desert Tiger",
+              "reason": "Its level is C. Its duration is 15 days."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "I have a level C quest: Collecting Dragon Teardrops. It's more dangerous and requires you to face the Earth Dragon.",
+      "functions": [
+        {
+          "name": "search_quest",
+          "parameters": {
+            "quest_level": "A",
+            "quest_level_operator": "more than",
+            "quest_duration_operator": "more than",
+            "quest_reward_operator": "more than"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 33,
+    "turn": "turn_8",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm looking for a quest that's less than 10 days but still challenging, so perhaps a level B quest. Got anything like that?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "In that case, how about the Commercial Escort which is a level B quest.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "How many days do I need, and what is the reward?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "This quest takes 7 days and offers 50 gold as a reward.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "What's the mission about? Why do those people need to be escorted?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You'll need to escort a trading party through an area known for monster sightings. There will be 3 monsters ambushing you along the way, so you need to stay sharp.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That sounds like a tough challenge. Any other quests that are a bit longer?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "There's another level B quest, Investigating an Abandoned Building.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "How many days does it take? What kind of monsters are we dealing with in the abandoned building? Do you know?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "This one takes 10 days. The building is infested with undead monsters. About 10 outside and nearly 100 inside. It's best to strike them in groups since they're not too strong individually.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "That could be an interesting challenge. What about something a bit more dangerous, meaning something at a higher level?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "You could try Hunting Down the Desert Tiger.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Can you give me all the details, please? What's the level and duration for this one? And where can I find this Desert Tiger? And what's the trick to taking it down?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "It's a level C quest that requires 15 days to complete. It rewards you with 200 gold. It's located beyond the forest, in the desert. The tiger is weak to light and can be defeated with close combat. A sword would be the best choice.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "The tiger is weak to light? What does that mean? How can I use light to defeat him?",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "It's vulnerable to light and will flinch when exposed to it. You can use light sources, like reflections or a flashlight, to make it flinch before taking it down.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Oh, I understand how it works now. Alright, I choose to take on this quest.",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "I'm glad you understand now. Would you like to sign up for the quest Hunting Down the Desert Tiger?",
+      "functions": [
+        {
+          "name": "select_request_confirm",
+          "parameters": {
+            "quest_name": "Hunting Down the Desert Tiger"
+          },
+          "return": []
+        }
+      ]
+    },
+    "model": {
+      "response": "Are you sure you want to proceed with the Hunting Down the Desert Tiger quest?",
+      "functions": [
+        {
+          "name": "select",
+          "parameters": {
+            "quest_name": "Hunting Down the Desert Tiger"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sample_idx": 34,
+    "turn": "turn_1",
+    "dialogue": [
+      {
+        "speaker": "player",
+        "text": "I'm interested in a quest that can be completed in 7 days or less, and offers a high reward.",
+        "target_item": []
+      },
+      {
+        "speaker": "npc",
+        "text": "We have a few options. There is the 'Exterminating the Giant Rats, and the Commercial Escort.",
+        "target_item": []
+      },
+      {
+        "speaker": "player",
+        "text": "Can you give me more details on the first one?",
+        "target_item": []
+      }
+    ],
+    "gold": {
+      "response": "The rats themselves are harmless, as they don't attack. However, the task is repetitive. Cutting off 100 tails can be exhausting.",
+      "functions": [
+        {
+          "name": "check_description",
+          "parameters": {
+            "quest_name": "Exterminating the Giant Rats"
+          },
+          "return": [
+            {
+              "description": "### **Quest Overview**\\n- The town's sewerage system is infested with large rats.\\n- The goal is to exterminate the rats and collect 100 large rat tails.\\n- The sewerage system is not far from town and easy to locate.\\n\\n### **Task Details**\\n- Cutting off 100 tails can be exhausting.\\n- Although the rats are large, they do not attack humans.\\n- When their tails are cut off, the rats shrink and disappear without a trace.\\n- The task requires catching many rats with minimal force.\\n\\n### **Difficulty and Purpose**\\n- This quest is straightforward and not much of a challenge.\\n- It’s a simple task but involves dealing with a large number of rats.\\n- While not glamorous, it can be good for warming up or practicing skills.\\n\\n### **Tips**\\n- Always keep working until you have collected 100 Giant Rat tails.\\n- Be prepared for the repetitive nature of the task."
+            }
+          ]
+        }
+      ]
+    },
+    "model": {
+      "response": "The quest \"Exterminating the Giant Rats\" is a B-level quest. It requires you to collect 100 Giant Rat tails from the town's sewers. The quest takes about 3 days to complete and offers 200 Gold as a reward. The rats don't attack, but you need to cut their tails carefully. Would you like to proceed with this quest?",
+      "functions": [
+        {
+          "name": "check_basic_info",
+          "parameters": {
+            "quest_name": "Exterminating the Giant Rats"
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,89 @@
+# GRPO training config for NPC-RL (Qwen3-8B, 4×RTX PRO 6000)
+# Launch with: bash configs/run_grpo.sh [toolcall|full]
+
+defaults:
+  - ppo_trainer
+
+# ─── Model ────────────────────────────────────────────────────────────────────
+actor_rollout_ref:
+  hybrid_engine: true
+
+  model:
+    path: outputs/sft/qwen3_8b/checkpoint-final  # set to your SFT checkpoint
+    trust_remote_code: true
+    use_remove_padding: true
+
+  actor:
+    optim:
+      lr: 1.0e-6
+    ppo_mini_batch_size: 64
+    ppo_micro_batch_size_per_gpu: 4
+    fsdp_config:
+      param_offload: false
+      grad_offload: false
+      optimizer_offload: false
+
+  rollout:
+    name: vllm
+    temperature: 1.0
+    top_p: 0.9
+    top_k: -1
+    do_sample: true
+    # GRPO group size: 8 rollouts per prompt
+    n: 8
+    tensor_model_parallel_size: 1
+    gpu_memory_utilization: 0.45
+    enforce_eager: false
+    free_cache_engine: true
+    # Qwen3 with thinking disabled
+    max_model_len: 2560
+
+  ref:
+    fsdp_config:
+      param_offload: true
+
+# ─── Algorithm ────────────────────────────────────────────────────────────────
+algorithm:
+  adv_estimator: grpo
+  norm_adv_by_std_in_grpo: true
+  use_kl_in_reward: true
+  kl_penalty: low_var_kl
+  kl_ctrl:
+    type: fixed
+    kl_coef: 0.001
+
+# ─── Data ─────────────────────────────────────────────────────────────────────
+data:
+  # Override in run_grpo.sh with train_files / val_files
+  train_files: data/verl/stage_0_train.parquet
+  val_files: data/verl/stage_0_val.parquet
+  train_batch_size: 128
+  max_prompt_length: 2048
+  max_response_length: 256
+  return_raw_chat: true
+  filter_overlong_prompts: true
+  truncation: left
+  apply_chat_template_kwargs:
+    enable_thinking: false
+
+# ─── Reward ───────────────────────────────────────────────────────────────────
+reward:
+  custom_reward_function:
+    path: src/verl_reward.py
+    name: compute_score
+  num_workers: 4
+
+# ─── Trainer ──────────────────────────────────────────────────────────────────
+trainer:
+  total_epochs: 1
+  total_training_steps: 150
+  project_name: npc-rl
+  experiment_name: grpo-toolcall-qwen3-8b
+  logger: ['console']
+  nnodes: 1
+  n_gpus_per_node: 4
+  save_freq: 50
+  val_freq: 25
+  default_local_dir: outputs/grpo/qwen3_8b_toolcall
+  default_hdfs_dir: null
+  resume_mode: auto

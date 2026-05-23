@@ -1,0 +1,41 @@
+### model
+model_name_or_path: /home/xiang/llm_models/qwen3_8b
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: configs/ds_z2.json
+
+### dataset
+dataset_dir: data
+dataset: npc_all
+template: qwen3_nothink
+cutoff_len: 4096
+max_samples: 4000
+overwrite_cache: true
+preprocessing_num_workers: 8
+dataloader_num_workers: 4
+packing: false
+
+### output
+output_dir: outputs/sft/qwen3_8b
+logging_steps: 10
+save_steps: 500
+save_total_limit: 2
+plot_loss: true
+overwrite_output_dir: true
+report_to: none
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-5
+num_train_epochs: 2.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+tf32: true
+gradient_checkpointing: true
+ddp_timeout: 180000000

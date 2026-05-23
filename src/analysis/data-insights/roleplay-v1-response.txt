@@ -1,0 +1,897 @@
+--- Response 1 ---
+A budget of 1000G? Sure, I have a few candidates. What features do you want to focus on? Lightness, strength, or looks?
+
+--- Response 2 ---
+A fine choice! Here you go. Would you like to equip the Zwei Hander now?
+
+--- Response 3 ---
+A great choice! Here you go. I'll include a basic care guide for the blade. Would you like to equip the sword now?
+
+--- Response 4 ---
+A reasonable concern. Have you considered the Man Gauche? It's a dagger that pairs well with spellcasting.
+
+--- Response 5 ---
+A solid choice. The Morning Star is reliable and powerful weapon. You wont regret it.
+
+--- Response 6 ---
+A valid concern. Our Long Bows are treated to withstand moisture, and they excel at striking distant targets even in challenging conditions.
+
+--- Response 7 ---
+A weapon with high attack power that can defeat multiple enemies at once. That's going to be a bit of an investment. What's your budget, if you don't mind me asking?
+
+--- Response 8 ---
+Actually, the Tiger is weak to bright light, so it might be hiding in the shadows. And since the desert is vast, patience will be key in your search.
+
+--- Response 9 ---
+Ah, a high reward! Let's see... I have one for you?'Hunting Down the Desert Tiger.' It's a bit of a challenge, but the reward is 200g.
+
+--- Response 10 ---
+Ah, swords! I've got a few that fit your needs. Let's see... Would you prefer a single-handed or a double-handed sword?
+
+--- Response 11 ---
+Ah, the Commercial Escort quest. You'll be escorting a trading party to a neighboring town. There have been reports of monsters lurking around the streets recently.
+
+--- Response 12 ---
+Ah, well that will depend on what type of weapon you need. We carry single and double-handed swords, axes, spears, bows, whips, and a selection of blunt weapons.
+
+--- Response 13 ---
+All kinds, actually. We get adventurers, mercenaries, and even a few scholars looking for something to defend themselves.
+
+--- Response 14 ---
+Alright, here's your weapon.
+
+--- Response 15 ---
+Alright, you're all set. Be sure to test it out in all kinds of situations. You'll really feel the difference in attack range when you swing it.
+
+--- Response 16 ---
+Alright. Just to be sure, do you want me to sign you up for the quest 'Investigating an Abandoned Building'?
+
+--- Response 17 ---
+Always. May the Trident guide you to triumph, and may your strength write its own legend. Would you like to equip it right away?
+
+--- Response 18 ---
+An admirable choice. The Trident will serve you well and reflect your dedication. Shall I prepare it for you?
+
+--- Response 19 ---
+Another option is Investigating an Abandoned Building. There are undead monsters inside an old building.
+
+--- Response 20 ---
+Another option is the 'Commercial Escort.' It requires 7 days and pays 50 gold. You'll escort a trading party and protect them from monsters along the way.
+
+--- Response 21 ---
+Anytime. Good luck with that Morning Star. I'm sure it will prove useful in the battlefield.
+
+--- Response 22 ---
+Are you sure you want to take on the quest Collecting Dragon Teardrops? It won't be an easy one.
+
+--- Response 23 ---
+Are you sure you want to take on the quest Exterminating the Giant Rats?
+
+--- Response 24 ---
+Are you sure you want to take on the quest Hunting Down the Desert Tiger?
+
+--- Response 25 ---
+As you wish. Your quest begins now. Good luck with escorting the merchants. May fortune be on your side.
+
+--- Response 26 ---
+Blunt weapons, you say? You're in luck. I've got two options that fit your needs. The Morning Star and the Bloody Saint Cross.
+
+--- Response 27 ---
+Certainly! Before we begin, do you have any specific conditions or preferences?
+
+--- Response 28 ---
+Certainly! I have a few options. The Man Gauche, the Short Sword, and the Long Sword. All are excellent choices. Shall I describe them?
+
+--- Response 29 ---
+Certainly, in that quest you will make your way to an abandoned building on the outskirts of town. A horde of undead have invaded and must be eliminated. This quest has a reward of 150 gold.
+
+--- Response 30 ---
+Certainly, in this quest you must collect a Miracle Herb that grows in the forest. You need to collect 50 of them to complete the quest and earn 5 gold.
+
+--- Response 31 ---
+Certainly, turn left down the street and walk up the hill. It's the large hall at the top. You can't miss it.
+
+--- Response 32 ---
+Certainly. Let me adjust the string tension for you - it needs to be just right in this humidity.
+
+--- Response 33 ---
+Consider the Long Bow. It allows you to maintain safe distance, especially useful in poor visibility conditions.
+
+--- Response 34 ---
+Definitely. Your role is to escort the party safely to its destination.
+
+--- Response 35 ---
+Demonic Sword is the strongest single-handed sword. It has an attack power of 75. The price is 7500G. A very strong long sword. It's sharp and can handle any form of attack.
+
+--- Response 36 ---
+Desert Tiger is sensitive to light and will flinch when exposed to it. It's best tackled with a sword in close combat.
+
+--- Response 37 ---
+Don't worry, it won't break so easily. In case it does, you can come back to me and I'll fix it for you.
+
+--- Response 38 ---
+Exactly. The Short Sword has a shorter, more compact blade. It's great for quick thrusts and close-range combat, especially effective for stabbing.
+
+--- Response 39 ---
+Excellent choice. That'll be 1200 gold. Would you like to equip it immediately?
+
+--- Response 40 ---
+Excellent choice. You are now signed up for Exterminating the Giant Rats. Would you like to start the quest now?
+
+--- Response 41 ---
+Excellent decision. Just to be sure, do you want to take on the quest Hunting Down the Desert Tiger?
+
+--- Response 42 ---
+Excellent. Your quest will begin shortly. Good luck on your journey, adventurer.
+
+--- Response 43 ---
+For this quest you will need to escort a trading party to a neighboring town, protecting them from monsters stalking passersby. You will recieve 50 gold upon your successful return.
+
+--- Response 44 ---
+For your budget, we have a few options. If you want something lightweight but still effective in combat, we can go with a couple of choices. What type of weapon are you looking for? Something quick and light, or something with a bit more weight?
+
+--- Response 45 ---
+Funny you ask. I was once an adventurer myself, but I found more satisfaction crafting and selling weapons to help others on their journeys.
+
+--- Response 46 ---
+Glad to help! You are now signed up for the quest Hunting Down the Desert Tiger. Would you like to begin it now?
+
+--- Response 47 ---
+Good choice! Please be aware that the weather might make things a bit harder. Are you sure you want to take on the quest Collecting Medical Herbs?
+
+--- Response 48 ---
+Good choice. I can guarantee it's a sword worth the value. Would you like to equip it now?
+
+--- Response 49 ---
+Good luck with your practice! See you around.
+
+--- Response 50 ---
+Got it, with that budget in mind, I believe we have one solid option. This here is the Hell Chain Whip.
+
+--- Response 51 ---
+Got it. Here is your new sword. Would you like to equip it right away?
+
+--- Response 52 ---
+Got it. So, the Two-Handed Sword it is. Do you want to equip it right now?
+
+--- Response 53 ---
+Got it. You're equipped. I'd recommend you take some time to practice with it before heading into any real battle. It's a powerful weapon, but you'll want to get used to how it moves in your hands.
+
+--- Response 54 ---
+Great choice! Here you go. Would you like to equip the Battle Axe now?
+
+--- Response 55 ---
+Great choice! I'll sign you up right now. Would you like to start the quest immediately?
+
+--- Response 56 ---
+Great choice! I've marked you down for the quest. Would you like to start it now, or later?
+
+--- Response 57 ---
+Great! Let me just confirm, do you want to apply for 'Hunting Down the Desert Tiger'?
+
+--- Response 58 ---
+Great, Morning Star is now equipped as your weapon. Anything else I can help you with, Lyrien?
+
+--- Response 59 ---
+Haha, just don't trip over yourself. I'd recommend testing your new sword a few times before you head out, get used to it!
+
+--- Response 60 ---
+Have you decided on which quest you would like to choose?
+
+--- Response 61 ---
+Hello again Flare, what kind of quest are you hoping for today? Are you looking based on difficulty or on the price of the reward?
+
+--- Response 62 ---
+Here is your Man Gauche.
+
+--- Response 63 ---
+Here's your Long Bow. I've included a waxed string cover for extra protection against the rain.
+
+--- Response 64 ---
+Hm, nothing out of the ordinary but I will let you know as soon as I hear about something!
+
+--- Response 65 ---
+Hmm, you're in luck. I have a few weapons that could serve you well. There is the Morning Star and the Hell Chain. The Morning Star is designed for crowd control.
+
+--- Response 66 ---
+I can guarantee it's a weapon of great value. With this in hand, you'll find yourself in very few situations where you're at a disadvantage.
+
+--- Response 67 ---
+I got it. Now, the quest starts! I'm sure you'll handle it just fine. Make sure to be extra cautious once you enter the building. Good luck.
+
+--- Response 68 ---
+I have a few options for you. Let's see what fits your needs. First, if you're prioritizing speed and agility, I'd recommend the Light-Weight Durable Knife and Man Gauche. They're daggers with short blades, that's perfect for quick strikes.
+
+--- Response 69 ---
+I see. If you're after an axe that can handle multiple enemies, the Battle Axe would suit you. It's a solid weapon with a blade on both ends.
+
+--- Response 70 ---
+I see. If you're looking for a single-handed sword with over 15 attack power, I have three options. The Long Sword, Dragon Cutter, and Demonic Sword.
+
+--- Response 71 ---
+I see. In that case, I'd recommend the Light-Weight Durable Knife for light, quick defense. It's compact and easy to carry, perfect for self-defense.
+
+--- Response 72 ---
+I see. In that case, there's a quest called Collecting Medical Herbs. It takes 2 days to complete, with a reward of 5 gold.
+
+--- Response 73 ---
+I see. Let me check the available quests. We have a few options that might be perfect for you. We have the Collecting Medical Herbs and Exterminating the Giant Rats.
+
+--- Response 74 ---
+I see. The 'Two-Handed Sword' is lighter and easier to handle. It's thick enough and long enough to hit a wide range of enemies.
+
+--- Response 75 ---
+I understand. Then I can introduce you to three types of swords. They are the Short Sword, Long Sword, and Two-Handed Sword.
+
+--- Response 76 ---
+I understand. There's a certain honor in standing solely on your own skill and resolve. Perhaps the Trident Spear would suit your philosophy better. Precise and agile, a weapon that works as an extension of your own strength.
+
+--- Response 77 ---
+I would recommend checking around the guild. They always have information and quests for adventurers to engage in.
+
+--- Response 78 ---
+I'll be looking forward to hearing about your success. Good luck out there, and stay safe!
+
+--- Response 79 ---
+I'm glad I can be of help. Please, feel free to come back anytime you need anything! Good luck with your adventures.
+
+--- Response 80 ---
+I'm glad I could be of help. Your quest will now begin. It's going to be a long and tough journey, so stay safe out there.
+
+--- Response 81 ---
+I'm glad to hear that! Would you like to proceed with this quest right now, or would you prefer some time to prepare?
+
+--- Response 82 ---
+I'm glad you understand now. Would you like to sign up for the quest Hunting Down the Desert Tiger?
+
+--- Response 83 ---
+I'm sure you wont be disappointed. Feel free to come back if you need another upgrade.
+
+--- Response 84 ---
+I've got a quest that fits you! It's a 'Investigating an abandoned building' on the outskirts of town.
+
+--- Response 85 ---
+I've heard from warriors that some can be as big as a wolf. When they spread their wings, they're even bigger.
+
+--- Response 86 ---
+If you go with the Dragon Cutter, the attack power goes up to 70. It's a bit expensive at 7000G, but it's a sharp sword said to be able to cut through dragon scales.
+
+--- Response 87 ---
+If you're facing a mix of enemies and want versatility, I'd say go with the Battle Axe. If raw power is your goal, the War Hammer is the way to go.
+
+--- Response 88 ---
+If you're looking for something with lots of enemies to tackle, I'd recommend 'Investigating an Abandoned Building.' About 100 undead monsters are lurking there, and the reward is 150G.
+
+--- Response 89 ---
+If you're willing to stretch your budget, there's the Hell Chain, a whip that eliminates enemies with ease. However, it's much more expensive. It costs 8000 gold.
+
+--- Response 90 ---
+In that case let me bring out my best three swords. They are Dragon Cutter, Demonic Sword and the Zwei Hander.  Do any of these happen to interest you?
+
+--- Response 91 ---
+In that case, how about the Commercial Escort which is a level B quest.
+
+--- Response 92 ---
+In that case, let me show you two options: the foldable 'Light-Weight Durable Knife' and the simple yet effective 'Man Gauche'.
+
+--- Response 93 ---
+In that case, we have Hunting Down the Desert Tiger.
+
+--- Response 94 ---
+In the Commercial Escort quest, you'll guard a trading party. Three monsters will ambush you on your way, and you'll need to fight them all at once.
+
+--- Response 95 ---
+In this one, you'd be clearing out giant rats in the town's sewer system. You'll need to bring back 100 rat tails. It's a 3-day quest, with reward of 20G, and has a level-A. It's pretty straightforward.
+
+--- Response 96 ---
+In this quest, you must exterminate giant rats infesting the town sewerage. You will collect the tails of 100 giant rats in exchange for a reward of 20 gold.
+
+--- Response 97 ---
+It requires only 2 days, but the reward is small, 5 gold.
+
+--- Response 98 ---
+It should take about 15 days.
+
+--- Response 99 ---
+It won't be an easy task, but with the right amount of preparation, I believe you'll be just fine.
+
+--- Response 100 ---
+It's a 10 day quest with a 150 gold reward. It's a B-level quest, so nothing you can't take care of.
+
+--- Response 101 ---
+It's a B level quest. There are undead monsters that have settled in the building. Outside, there are around ten of them, but it's inside that things get dangerous.
+
+--- Response 102 ---
+It's a bit dangerous. Monsters, specifically undead, have taken over the building. It's best to strike quickly, since they tend to swarm in large numbers inside.
+
+--- Response 103 ---
+It's a blunt weapon with an iron ball on a chain. It has a powerful swing, making it perfect for striking multiple foes. It'll cost you 300.
+
+--- Response 104 ---
+It's a level B quest, requires 10 days, and offers 150 gold. There are about 10 undead monsters outside, but over 100 more inside. They're not too strong individually, but you'll face them in large numbers.
+
+--- Response 105 ---
+It's a level C quest that requires 15 days to complete. It rewards you with 200 gold. It's located beyond the forest, in the desert. The tiger is weak to light and can be defeated with close combat. A sword would be the best choice.
+
+--- Response 106 ---
+It's all about momentum. The chain allows for wide sweeps, hitting more than one target at a time. It's very effective in close-quarter combat.
+
+--- Response 107 ---
+It's definitely the right season for a stroll and survival training. But be careful and don't let your guard down. Make sure to use your gear wisely.
+
+--- Response 108 ---
+It's got a 40 attack power, which is more than enough for most encounters. It'll give you some real edge in the thick of battle.
+
+--- Response 109 ---
+It's great for strong opponents but requires both hands, so If you want to fight light, I can't say it'd be the best choice.
+
+--- Response 110 ---
+It's priced at 400 gold. That's well within your budget, and it'll serve you well on your travels. Consider it a solid investment.
+
+--- Response 111 ---
+It's priced at 8000 G and has an attack power of 80.
+
+--- Response 112 ---
+It's vulnerable to light and will flinch when exposed to it. You can use light sources, like reflections or a flashlight, to make it flinch before taking it down.
+
+--- Response 113 ---
+Its lightweight design makes it ideal for quick reactions. At 100G, it's an affordable backup weapon.
+
+--- Response 114 ---
+Just to confirm, do you want to take on the quest Exterminating the Giant Rats?
+
+--- Response 115 ---
+Just to confirm, you are selecting the quest 'Investigating an Abandoned Building'.
+
+--- Response 116 ---
+Last one is a Two-Handed Sword. It's one of double-handed swords, heavy but delivers devastating power. It is suited for attacking enemies and cutting them up.
+
+--- Response 117 ---
+Let me see... Ah, I've got a couple of options that should work for you. We have the Short Sword and the Man Gauche.
+
+--- Response 118 ---
+Let me see... Here are some options for you. There are the 'Investigating an Abandoned Building' quest and 'Collecting Medical Herbs' quest which is level A.
+
+--- Response 119 ---
+Man Gauche has an attack power of 10 and the Light-Weight Durable Knife has 5. Therefore, the Man Gauche has slightly higher attack power.
+
+--- Response 120 ---
+Many find them particularly effective during summer storms when monsters are harder to spot. The Guild actually recommends ranged weapons for night patrols.
+
+--- Response 121 ---
+Next, it's a Long Sword with a thick blade. It is relatively light in weight so you can take a swing. It is longer than the short sword and can attack a wider range of enemies.
+
+--- Response 122 ---
+Not at all. The summer evenings are long, and rainy weather often brings unexpected challenges. What type of weapon interests you?
+
+--- Response 123 ---
+Not necessarily, but it's excellent for those who prefer precise strikes. If you're looking for something truly exceptional, though, I have one more to show you.
+
+--- Response 124 ---
+Of course! Could you tell me your destination and if you have any specific interests? I'd be happy to offer tailored suggestions.
+
+--- Response 125 ---
+Of course! I have a few quests that might interest you. Let me give you a rundown.
+
+--- Response 126 ---
+Of course! It's a quest to hunt down the Desert Tiger. It takes 15 days, the level is C, and the reward is 200G. It's a high-difficulty quest, so the challenge is definitely worth it!
+
+--- Response 127 ---
+Of course! The Desert Tiger has been spotted beyond the forest, in the desert. It's known to be quick and dangerous, so it'll require a good strategy.
+
+--- Response 128 ---
+Of course! We have a few quests available at the moment. What kind of challenge are you looking for?
+
+--- Response 129 ---
+Of course. Always keep your weapon well-maintained. A sharp blade is as important as your skill with it.
+
+--- Response 130 ---
+Of course. For more offensive use, I'd recommend the Short Sword or the Long Sword.
+
+--- Response 131 ---
+Of course. It has an attack level of 60 and costs 1200 gold. Its long, thick blade makes it effective for combat while being easy to handle.
+
+--- Response 132 ---
+Of course. The Short Sword is a lightweight, easy-to-handle weapon. It's great for quick thrusts and stabbing, and it's ideal if you're looking for something nimble but still effective in close combat.
+
+--- Response 133 ---
+Of course. The Short Sword is light, easy to handle, and has an attack power of 15. It's perfect for quick thrusting and quick strikes.
+
+--- Response 134 ---
+Of course. The changing seasons often bring new challenges. What type of combat situations are you preparing for?
+
+--- Response 135 ---
+Of course. The two-handed sword is sturdy and well-balanced, great for slicing through enemies. It's a dependable choice for most adventurers.
+
+--- Response 136 ---
+Oh, I'm sure you won't be disappointed. Feel free to come back if you ever need anything else!
+
+--- Response 137 ---
+Oh, definitely. Every now and then, someone comes in with a story that's hard to believe!
+
+--- Response 138 ---
+Oh, don't worry about it, Lyrien. I'm always happy to help. Let me know if you need help with anything else, okay?
+
+--- Response 139 ---
+Oh, of course. What size are you thinking? I have everything from knives to longswords.
+
+--- Response 140 ---
+Okay, I will mark you down straight away. Would you like to start the quest now?
+
+--- Response 141 ---
+Okay. The Two-handed Sword is now equipped as your weapon. Is there anything else I can help you with?
+
+--- Response 142 ---
+One option is Commercial Escort. You'll escort a trading party and face three monster ambushes.
+
+--- Response 143 ---
+Position it where it won't interfere with your spell-casting movements. Like this.
+
+--- Response 144 ---
+Quest confirmed. Will you be heading out right away, or do you need to gather supplies and gear first?
+
+--- Response 145 ---
+Quest starts. I'm wishing you success in the battle! I'm sure you'll prove your sword skills. I believe in your success!
+
+--- Response 146 ---
+Right. The Long Sword has a longer blade, but it's still relatively light. It's designed for swings, offering more reach and power, making it useful for both close and slightly longer encounters.
+
+--- Response 147 ---
+Safe travels adventurer! Our doors are always open.
+
+--- Response 148 ---
+Shall I register you for 'Exterminating the Giant Rats,' then?
+
+--- Response 149 ---
+Smart thinking. Go forth, with the Trident in hand and your resolve unwavering. May your path be victorious and your strength unmatched.
+
+--- Response 150 ---
+So, you've decided on the ‘Commercial Escort' quest. Is that correct?
+
+--- Response 151 ---
+Stay alert with your new dagger. The mists bring creatures that move silently. Focus on smooth, single-motion draws. Speed matters more than power with this blade.
+
+--- Response 152 ---
+Sure!  Thank you for stopping by and trusting me. Good luck on your quest! Take care, and stay safe!
+
+--- Response 153 ---
+Sure! How about Exterminating the Giant Rats or Collecting Dragon Teardrops?
+
+--- Response 154 ---
+Sure! The Collecting Medical Herbs quest requires 2 days and offers a reward of 5 gold.
+
+--- Response 155 ---
+Sure, Collecting Dragon Teardrops is an S-Level quest that takes 30 days to complete. The reward is 1000 gold for this quest.
+
+--- Response 156 ---
+Sure, let me explain. The Long Sword has an attack power of 20, the lowest of the three. It has a thick blade, but is light enough for easy swings. It costs 400G.
+
+--- Response 157 ---
+Sure. there is one more option. It's a Man Gauche, a very easy-to-handle dagger. and it's quick and light, making it great for both offense and defense.
+
+--- Response 158 ---
+Thank you for selecting your quest. Will you embark on your quest now, or wait until later. Please remember to equip any important weapons and pack any necessary items before you embark on your journey.
+
+--- Response 159 ---
+Thank you for selecting your quest. Would you like to begin the quest now, or start at a later time? If you want to start your quest now, be sure you have the correct weapon equipped and appropriate items in your inventory.
+
+--- Response 160 ---
+Thank you for the purchase! Heres your sword. Would you like to equip it now?
+
+--- Response 161 ---
+Thank you for your patronage! Would you like to equip your item now?
+
+--- Response 162 ---
+Thank you for your purchase! Here's your Morning Star. Would you like to equip it now?
+
+--- Response 163 ---
+Thank you for your purchase! Would you like to equip it immediately?
+
+--- Response 164 ---
+Thank you for your purchase, Darkhunter. Would you like to equip the weapon?
+
+--- Response 165 ---
+Thank you for your purchase. I'm sure this will serve you well in your travels. Here you go. Would you like to equip it now, or do you prefer to take it with you?
+
+--- Response 166 ---
+Thank you for your purchase. Would you like to equip it right away?
+
+--- Response 167 ---
+Thank you. Here is your new sword. I'm confident it will protect you. Please, travel safely.
+
+--- Response 168 ---
+Thank you. Here's your Long Sword. Would you like to equip it right away?
+
+--- Response 169 ---
+Thanks for your purchase. I think it's a good choice. It's an effective weapon because it's light but shaped to transmit power easily. Would you like to equip it on right now?
+
+--- Response 170 ---
+That is 'Hunting Down the Desert Tiger'. In the desert beyond the forest, a Desert Tiger has been located. It must be vanquished, but it is a formidable creature. You will receive 200 gold if successful.
+
+--- Response 171 ---
+That is the Long Bow, an excellent choice for a strong young man like yourself. While it cannot be reloaded as quickly, it is excellent for long range attacks and can deal more damage than the standard Hunter's Bow. This one costs 300 gold.
+
+--- Response 172 ---
+That sounds exciting. Are you heading out on the quest right now, or would you prefer to take a little more time to prepare first?
+
+--- Response 173 ---
+That's a great choice! Are you deciding on the Long Sword, then?
+
+--- Response 174 ---
+That's an S-level quest, the highest difficulty. You'll have 30 days to locate an Earth Dragon in the mountains and collect one of its tears. Dragon tears are incredibly rare and are used to make a cure-all drug.
+
+--- Response 175 ---
+That's right. The Long Sword is slightly longer. Both are light and easy to handle. The Long Sword, in particular, has a thick blade.
+
+--- Response 176 ---
+That's the spirit. Alright, then. Would you like me to officially register you for this quest?
+
+--- Response 177 ---
+That's true, I do miss it sometimes. Especially the thrill of battle. But seeing my creations in action through my customers is just as rewarding.
+
+--- Response 178 ---
+That's what I'm here for. Your quest will now begin. Have a safe journey, adventurer.
+
+--- Response 179 ---
+The 'Two-Handed Sword' is 1200G with an attack level of 60, a solid mid-tier weapon.
+
+--- Response 180 ---
+The Battle Axe is perfect for that. It's versatile and great for crowd control. With a blade on each side, you get balanced strikes. It's also durable enough to hold up in intense combat. It's priced at 400 gold,
+
+--- Response 181 ---
+The Bloody Saint Cross, priced at 9,000g, packs a punch with an attack of 90. Perfect for large monsters too.
+
+--- Response 182 ---
+The Collecting Medical Herbs quest takes 2 days, with a reward of 5 gold. You'd need to collect 50 Miracle Herbs from the nearby forest. They heal wounds immediately when applied as a paste. It requires a sword or axe for cutting the herbs.
+
+--- Response 183 ---
+The Light-Weight Knife is foldable, making it even more portable and lightweight. And it's quite affordable at just 10G. On the other hand, the Man Gauche is a suitable for warding off your opponent's attack, with a slightly longer reach. It's priced 100G.
+
+--- Response 184 ---
+The Long Bow is 300G. Very reasonable for the advantages it provides.
+
+--- Response 185 ---
+The Long Sword balances power and agility. Its thick blade intimidates, and the lighter weight allows for faster movements compared to similar swords.
+
+--- Response 186 ---
+The Long Sword has an attack power of 20, so it's definitely stronger than the Short Sword, which has 15.
+
+--- Response 187 ---
+The Long Sword is also single-handed, costs 400 gold, and has an attack level of 20. Very balanced for quick strikes.
+
+--- Response 188 ---
+The Man Gauche can be held in your off-hand while maintaining spell gestures with your dominant hand, and the sheath is designed for quick access.
+
+--- Response 189 ---
+The Man Gauche has an attack level of 10 and is excellent for warding off surprise attacks when visibility is poor.
+
+--- Response 190 ---
+The Man Gauche is a bit smaller. It's more of a dagger than a sword, but it's also lightweight, with an attack power of 10. It's good for defense and close combat.
+
+--- Response 191 ---
+The Man Gauche is a dagger, perfect for defense and countering, priced at 100. The Short Sword is light and great for stabbing at 300 a piece. The Long Sword offers a strong swing while still being lightweight. It costs 400.
+
+--- Response 192 ---
+The Morning Star for 300g. It's simple, reliable, and great for crowd control with an attack level of 30.
+
+--- Response 193 ---
+The Morning Star's fairly heavy, but it's not too much for someone with your build. It's all about the swing.
+
+--- Response 194 ---
+The Short Sword is 300 gold. It's light and easy to handle with an attack level of 15.
+
+--- Response 195 ---
+The Short Sword is 300, and the Long Sword is 400. If you want to focus on stabbing attacks, the Short Sword is better, but if you prefer swinging and slashing, the Long Sword would be more suitable.
+
+--- Response 196 ---
+The Short Sword is 300G, with an attack level of 15. The Long Sword, on the other hand, costs 400G and has an attack level of 20. Both are solid choices depending on what you're looking for.
+
+--- Response 197 ---
+The Two-Handed Sword is a fine piece. It's priced at 1200 gold, and it's attack level is 60. It is long, thick, and ideal for cutting down multiple foes.
+
+--- Response 198 ---
+The War Hammer is heavier and packs more punch. It's excellent for breaking through defenses or ending a fight with a single blow. It requires more strength to wield, though. The price is 450 gold.
+
+--- Response 199 ---
+The Zwei Hander is in a league of its own. It's a massive blade built for warriors seeking unmatched power. It boasts an attack level of 90, and it's priced at 9000 gold.
+
+--- Response 200 ---
+The Zwei Hander' can hit a lot of enemies with one swing. It's more powerful than the Two-Handed Sword, but it's also much harder to handle. It's a weapon for advanced warriors.
+
+--- Response 201 ---
+The divine protection enhances its durability and precision. It's not just a weapon. It's a symbol of mastery and strength, ideal for high-stakes battles.
+
+--- Response 202 ---
+The other one is Exterminating the Giant Rats quest. It takes 3 days and has a higher reward of 20 gold.
+
+--- Response 203 ---
+The quest requires you to collect 50 Miracle Herbs from a nearby forest. These herbs are highly valued as they can heal wounds instantly when ground into a paste.
+
+--- Response 204 ---
+The quest takes 10 days, and offers a 150 gold reward. Will you be interested?
+
+--- Response 205 ---
+The rats themselves are harmless, as they don't attack. However, the task is repetitive. Cutting off 100 tails can be exhausting.
+
+--- Response 206 ---
+The reward for clearing Hunting Down the Desert Tiger is 200 gold. For 15 days, that's plenty if you ask me.
+
+--- Response 207 ---
+The reward is 20 gold for collecting 100 Giant Rat tails. The rats won't attack, but you'll need to gather their tails and bring them back.
+
+--- Response 208 ---
+The tiger is susceptible to light and flinches when exposed to it. You'll need to engage it in close combat and bring it down with a sword.
+
+--- Response 209 ---
+There are three monsters that will ambush you during the journey. They attack simultaneously, so you'll need to be strategic and ready for a tough battle.
+
+--- Response 210 ---
+There are three quests that may suit you. There are the 'Commercial Escort,' 'Investigating an Abandoned Building,' and 'Hunting Down the Desert Tiger'.
+
+--- Response 211 ---
+There's another level B quest, Investigating an Abandoned Building.
+
+--- Response 212 ---
+There's the Hunting Down the Desert Tiger quest, which takes 15 days to complete. It requires you to hunt a Desert Tiger in the desert beyond the forest.
+
+--- Response 213 ---
+They're located in the town's sewerage system. It's not far from here, and you'll easily spot them. They're large but harmless.
+
+--- Response 214 ---
+They're usually small, and they come in numbers. Occasionally, though, you'll come across a big one. Like a boss monster.
+
+--- Response 215 ---
+This is the Demonic Sword, another one handed sword. It is known for its versatility and is very strong and capable of withstanding many different attacks. It has a price of 7,500 gold.
+
+--- Response 216 ---
+This one is a single-handed sword called the Dragon Cutter. It has a finely honed blade, said to be able to cut dragon scales. It deals significant damage and costs 7,000 gold.
+
+--- Response 217 ---
+This one takes 10 days. The building is infested with undead monsters. About 10 outside and nearly 100 inside. It's best to strike them in groups since they're not too strong individually.
+
+--- Response 218 ---
+This one? It is the Hunter's Bow. While it may deal less damage than some of our other weapons, it makes up for it with quick reloading speed allowing you to fire in quick succession. This one here is 100 gold.
+
+--- Response 219 ---
+This quest takes 7 days and offers 50 gold as a reward.
+
+--- Response 220 ---
+This quest will take 7 days to complete. I'd recommend preparing for the monsters along the way.
+
+--- Response 221 ---
+Trident features a three-pronged head, offering excellent precision for spearing. It's lightweight and well-balanced, priced at 1000 G, with an attack level of 50.
+
+--- Response 222 ---
+Understood! Your quest starts now. I have no doubt you'll do great. Good luck out there!
+
+--- Response 223 ---
+Understood. So, you're going with 'Hunt the Desert Tiger,' no doubt?
+
+--- Response 224 ---
+Understood. The three types that we have are the Lance, Trident, and Zephyr.
+
+--- Response 225 ---
+Understood. Your quest begins now. I wish you the best of luck on your journey, adventurer.
+
+--- Response 226 ---
+Understood. Your quest starts now. Good luck collecting the dragon's tear, adventurer.
+
+--- Response 227 ---
+Using a sword is effective, since you can use the light to distract and blind it. While it's disoriented, you can close in and strike with your sword.
+
+--- Response 228 ---
+Very well, Here you go. Would you like to equip it right now, or perhaps later?
+
+--- Response 229 ---
+Very well, It is now equipped as your weapon. Is there anything else I can help with?
+
+--- Response 230 ---
+Very well, Your quest will start now, Adventurer. I wish you good luck on your journey.
+
+--- Response 231 ---
+Very well, the Short Sword is now equipped as your weapon. Anything else you need help with?
+
+--- Response 232 ---
+Very well, you are now signed up for the quest. Would you like to start it now?
+
+--- Response 233 ---
+Very well. Do you want me to sign you up for the quest Commercial Escort?
+
+--- Response 234 ---
+Very well. The Battle Axe is now equipped as your weapon. For maintenance, Keep the blades sharp with a wetstone after every use, and oil the metal to prevent rusting.
+
+--- Response 235 ---
+Very well. The Long Sword is now equipped as your weapon. Anything else I can assist you with?
+
+--- Response 236 ---
+Very well. You are now registered for the quest. Would you like to start the quest now?
+
+--- Response 237 ---
+Very well. You are now signed up for Hunting Down the Desert Tiger. Would you like to start the quest now?
+
+--- Response 238 ---
+Very well. You are now signed up for the quest Exterminating the Giant Rats. Would you like to start the quest now?
+
+--- Response 239 ---
+Very well. You are now signed up for the quest. Would you like to start it now, or at a later date?
+
+--- Response 240 ---
+Very well. Your quest is underway. I wish you the best of look, Victoria.
+
+--- Response 241 ---
+Very well. Your quest will begin now. Good luck on your journey. May you find the tiger easily.
+
+--- Response 242 ---
+Very well. Your quest will now begin. Good luck collecting those tails, adventurer. May luck be on your side.
+
+--- Response 243 ---
+Very well. Zwei Hander is now equipped as your weapon. Anything else I can help you with?
+
+--- Response 244 ---
+We also have Exterminating the Giant Rats. It's a 3-day quest with a 20 gold reward. The rats don't fight back, though so you don't have to worry about that.
+
+--- Response 245 ---
+We have Hunting Down the Desert Tiger that involves intense combat and Collecting Dragon Teardrops where you have to encounter an Earth Dragon.
+
+--- Response 246 ---
+We have a couple of excellent options. The Two-Handed Sword, and the more powerful blade called the Zwei Hander. Which one would you like to hear about first?
+
+--- Response 247 ---
+We have a couple of options available. There's the Collecting Medical Herbs quest and the Exterminating the Giant Rats quest. What interests you most?
+
+--- Response 248 ---
+We have a few options available. There are Exterminating the Giant Rats and Hunting Down the Desert Tiger. Do you want me to explain about Exterminating the Giant Rats quest first?
+
+--- Response 249 ---
+We have a few options. There is the 'Exterminating the Giant Rats, and the Commercial Escort.
+
+--- Response 250 ---
+We have many swords available, what budget do you have in mind?
+
+--- Response 251 ---
+We have quite a few quests open at the moment, what difficulty are you looking for with this quest.
+
+--- Response 252 ---
+We have two A level quests at the moment. They are 'Collecting Medical Herbs' and 'Exterminating Giant Rats'
+
+--- Response 253 ---
+We've got two types right now. The 'Two-Handed Sword' and the 'Zwei Hander'. What kind of battle are you preparing for?
+
+--- Response 254 ---
+Weapon Equipped. I'm relieved to hear that. I'm glad I could be of help. I hope this sword serves you well, no matter the situation.
+
+--- Response 255 ---
+Well, as far as I know, even the big ones don't hit any harder. Your current gear should be fine. Just make sure you don't get startled.
+
+--- Response 256 ---
+Well, if you're looking for something with a bit more reach, I'd suggest the Short Sword or the Long Sword. Both are solid choices with decent blade lengths.
+
+--- Response 257 ---
+Well, nearly a hundred undead monsters are hiding inside, and while each monster is not too strong on its own, dealing with them in groups is the most efficient way to handle them.
+
+--- Response 258 ---
+Well, we've got Investigating an Abandoned Building.
+
+--- Response 259 ---
+With that budget, we have a few excellent options. I just want to make sure at the outset that you are looking for a basic sword rather than a knife-like dagger?
+
+--- Response 260 ---
+Yeah, plenty of adventurers come by. Some to buy new items, and others to thank me for how my weapons have saved them.
+
+--- Response 261 ---
+Years of traveling and forming connections. Each piece is chosen with care, often from master blacksmiths.
+
+--- Response 262 ---
+Yes, a sword or axe would be ideal for cutting the herbs. It can be difficult to harvest them when they're wet, especially on rainy days like today.
+
+--- Response 263 ---
+Yes, but they don't attack back. Just cut off the tails, and they'll vanish.
+
+--- Response 264 ---
+Yes, especially during this season. The autumn winds can affect magical accuracy.
+
+--- Response 265 ---
+Yes, it's Level C. It requires 15 days and the reward is 200 gold. The Desert Tiger is tough. It flinches when exposed to light, so use it to your advantage. Fight it up close with a sword, and I'm sure you can beat it.
+
+--- Response 266 ---
+Yes, some of the other quests that you might want to consider are 'Commercial Escort,' 'Investigating an Abandoned Building,' and 'Hunting Down the Desert Tiger.'
+
+--- Response 267 ---
+Yes, the Desert Tiger is said to roam the desert, beyond the forest. That's where you'll track it down and face it.
+
+--- Response 268 ---
+Yes, the Light-Weight Durable Knife has an attack level of 5, while the Man Gauche is at 10. Both are great for parrying enemy attacks.
+
+--- Response 269 ---
+Yes, the Short Sword is priced at 300 gold, well within your budget of 500. It's a great deal for the quality.
+
+--- Response 270 ---
+Yes, the Zephyr, a kind of legendary weapon said to be protected by the God of Thunder. It's incredibly lightweight with top-tier striking power and an attack level of 100. It's priced at 10,000 G.
+
+--- Response 271 ---
+Yes, the herbs are difficult to collect on rainy days, as they get too wet. You'll need an axe or a sword to harvest them efficiently.
+
+--- Response 272 ---
+Yes, the rain makes the herbs tougher to cut. A sword or axe is necessary, but it could be challenging due to the wet conditions.
+
+--- Response 273 ---
+Yes, the reward is 150 G. It's a fair payout for a 10-day task. Would you like to take it?
+
+--- Response 274 ---
+You are correct! That is the Avis Wind and it has a reputation for speed and strength. It is said that once this bow is used, the target cannot escape. It fires rapidly with powerful strikes, but this reputation comes with a hefty price tag of 7500 gold.
+
+--- Response 275 ---
+You could try Hunting Down the Desert Tiger.
+
+--- Response 276 ---
+You have a good eye, this is the Zwei Hander. It is a heavy double-handed sword, not for the fledgling adventurer. Its impressive size allows it to take down many enemies at once. This sword is the most powerful out of the three, with a price of 9,000 gold.
+
+--- Response 277 ---
+You have now equipped the Battle Axe. Anything else I can help with?
+
+--- Response 278 ---
+You have requested to select the quest 'Exterminating Giant Rats', is this correct.
+
+--- Response 279 ---
+You might be interested in the Short Sword or Long Sword.
+
+--- Response 280 ---
+You need to collect 100 Giant Rat tails in the sewerage. Once you cut their tails they'll shrink and disappear, so you only need to bring back the tails.
+
+--- Response 281 ---
+You need to gather 50 Miracle Herbs from the nearby forest. They heal wounds instantly when ground into paste.
+
+--- Response 282 ---
+You should try practicing swinging your Battle Axe at the training ground. It is quite heavy so beginner may struggle with it in the beginning.
+
+--- Response 283 ---
+You too, Storm. Enjoy your new weapon and feel free to come back if you need anything else!
+
+--- Response 284 ---
+You'd need to cut off one of the Earth Dragon's scales. Doing so will make it shed a tear. But you'd need a Dragon Cutter sword to cut through those scales.
+
+--- Response 285 ---
+You'll be collecting Miracle Herbs in the nearby forest. These herbs heal wounds instantly, but they're in high demand, so it's important to gather a good amount.
+
+--- Response 286 ---
+You'll need to escort a trading party through an area known for monster sightings. There will be 3 monsters ambushing you along the way, so you need to stay sharp.
+
+--- Response 287 ---
+You'll need to exterminate Giant Rats in the town sewerage, collecting 100 of their tails. The rats don't fight back, so there isn't any danger.
+
+--- Response 288 ---
+You're all registered! Are you heading out right now, or would you like to wait?
+
+--- Response 289 ---
+You're all set! Once you've tried it out, I'd love to hear your feedback. It'll help me improve future designs!
+
+--- Response 290 ---
+You're all set. Are you heading out on a journey with this gear?
+
+--- Response 291 ---
+You're right, all of these are good weapons, but I do think you should give the Long Sword a try. Is it alright if I go ahead and prepare it for purchase?
+
+--- Response 292 ---
+You're right. If portability is your priority, then that's the perfect choice. Is it settled that you'll go with the Short Sword?
+
+--- Response 293 ---
+You're right. It's made from a special material that gives it high quality. All you need to do is focus on what you want to do, channel your strength, and it moves just the way you intend it to. It's almost like an extension of your own hand.
+
+--- Response 294 ---
+You're welcome! May your new sword serve you well, and may your path be filled with victories. Come back anytime.
+
+--- Response 295 ---
+You've got some solid options. There's the Battle Axe Then, the War Hammer.
+
+--- Response 296 ---
+Your quest has begun, best of luck in the task ahead!
+
+--- Response 297 ---
+Your quest has begun. Luck be with you Adventurer.
+
+--- Response 298 ---
+Your weapon has been equipped. Safe travels adventurer, come back anytime!
+
+--- Response 299 ---
+Your weapon is equipped. I'm sure a strong adventurer like yourself will make good use of it! Although I do feel sympathetic to you this time of year, full armor in the summer heat must be a trial.
+

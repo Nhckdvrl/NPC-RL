@@ -1,0 +1,42 @@
+{
+  "npc_all": {
+    "file_name": "sft/stage_all.json",
+    "formatting": "sharegpt",
+    "columns": { "messages": "conversations", "tools": "tools" },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt",
+      "system_tag": "system",
+      "function_tag": "function_call",
+      "observation_tag": "observation"
+    }
+  },
+  "npc_toolcall": {
+    "file_name": "sft/stage_0.json",
+    "formatting": "sharegpt",
+    "columns": { "messages": "conversations", "tools": "tools" },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt",
+      "system_tag": "system",
+      "function_tag": "function_call",
+      "observation_tag": "observation"
+    }
+  },
+  "npc_roleplay": {
+    "file_name": "sft/stage_1.json",
+    "formatting": "sharegpt",
+    "columns": { "messages": "conversations" },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt",
+      "system_tag": "system"
+    }
+  }
+}

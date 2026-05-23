@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# Training outputs (large — not committed)
+outputs/
+logs/*.log
+results/
+
+# Raw data & processed data (large — download separately)
+data/raw/coser/full/
+data/sft/
+data/verl/
+
+# Model weights
+*.pt
+*.bin
+*.safetensors
+*.gguf
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment & secrets
+.env
+*.env
+.venv/
+venv/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Tiktoken cache
+agents/.tiktoken_cache/
+
+# CI config (not needed for standalone project)
+.gitlab-ci.yml
+
+# Analysis output
+src/analysis/data-insights/insights/

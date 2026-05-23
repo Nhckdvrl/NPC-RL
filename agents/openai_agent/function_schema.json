@@ -1,0 +1,140 @@
+{
+  "sell": {
+    "item_names": {
+      "type": "List[str]"
+    }
+  },
+  "equip": {
+    "item_name": {
+      "type": "str"
+    }
+  },
+  "sell_request_confirm": {
+    "item_name": {
+      "type": "str"
+    }
+  },
+  "sell_request_record": {
+    "item_name": {
+      "type": "str"
+    }
+  },
+  "select": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "start": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "select_request_confirm": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "select_request_record": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "search_item": {
+    "item_name": {
+      "type": "str"
+    },
+    "item_price": {
+      "type": "str"
+    },
+    "item_type": {
+      "type": "str"
+    },
+    "item_attack": {
+      "type": "str"
+    },
+    "item_description": {
+      "type": "str"
+    },
+    "item_name_operator": {
+      "type": "str"
+    },
+    "item_price_operator": {
+      "type": "str"
+    },
+    "item_type_operator": {
+      "type": "str"
+    },
+    "item_attack_operator": {
+      "type": "str"
+    }
+  },
+  "check_basic_info": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "check_price": {
+    "item_name": {
+      "type": "str"
+    }
+  },
+  "check_type": {
+    "item_name": {
+      "type": "str"
+    }
+  },
+  "check_attack": {
+    "item_name": {
+      "type": "str"
+    }
+  },
+  "check_description": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "search_quest": {
+    "quest_name": {
+      "type": "str"
+    },
+    "quest_level": {
+      "type": "str"
+    },
+    "quest_duration": {
+      "type": "str"
+    },
+    "quest_reward": {
+      "type": "str"
+    },
+    "quest_description": {
+      "type": "str"
+    },
+    "quest_name_operator": {
+      "type": "str"
+    },
+    "quest_level_operator": {
+      "type": "str"
+    },
+    "quest_duration_operator": {
+      "type": "str"
+    },
+    "quest_reward_operator": {
+      "type": "str"
+    }
+  },
+  "check_level": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "check_duration": {
+    "quest_name": {
+      "type": "str"
+    }
+  },
+  "check_reward": {
+    "quest_name": {
+      "type": "str"
+    }
+  }
+}
