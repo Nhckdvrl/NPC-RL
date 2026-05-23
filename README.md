@@ -28,18 +28,18 @@ The root keeps the original runnable training paths stable, while the new top-le
 
 ```text
 NPC-RL/
-├── NPC-post-training/       # Research/training entrypoint with configs/data/src/eval links
-├── NPC-agent/               # Harness + FastAPI serving entrypoint
+├── NPC-post-training/       # Training pipeline (README has the full technical report)
+│   ├── configs/             # SFT, GRPO, DeepSpeed configs
+│   ├── data/                # Dataset registry and raw/processed data
+│   ├── src/                 # Data transforms, reward functions, synthesis
+│   ├── eval/                # Toolcall/roleplay evaluation
+│   ├── function_calls/      # Game tool/action schemas and gold executor
+│   └── docs/training_report.md  # Bilingual technical report
+├── NPC-agent/               # Agent harness + FastAPI serving
+│   ├── npc_harness/         # Two-phase NPC runtime (engine, providers, backend, ...)
+│   ├── function_calls -> NPC-post-training/function_calls
+│   └── service/             # FastAPI wrapper
 ├── playable-demo/           # Static browser demo for the served NPC
-├── configs/                 # SFT, GRPO, DeepSpeed configs
-├── data/                    # Dataset registry and raw/processed data locations
-├── src/                     # Data transforms, reward functions, synthesis, analysis
-├── agents/
-│   ├── npc_harness/         # Two-phase NPC runtime
-│   └── openai_agent/        # Earlier OpenAI-compatible inference agent
-├── function_calls/          # Game tool/action stubs and registries
-├── eval/                    # Toolcall/roleplay evaluation
-├── docs/training_report.md  # Detailed bilingual training report
 └── outputs/                 # Checkpoints, gitignored
 ```
 
@@ -63,7 +63,7 @@ Phase 3: roleplay model pass
 short in-character NPC reply
 ```
 
-The trained model is not buried in a web UI. It is called in `agents/npc_harness/engine.py` through `OpenAICompatProvider` in `agents/npc_harness/providers.py`, which points at a vLLM OpenAI-compatible endpoint.
+The trained model is not buried in a web UI. It is called in `NPC-agent/npc_harness/engine.py` through `OpenAICompatProvider` in `NPC-agent/npc_harness/providers.py`, which points at a vLLM OpenAI-compatible endpoint.
 
 ## Setup
 
@@ -133,7 +133,7 @@ Reward design:
 - `npc/roleplay`: LLM judge score from 0 to 1 over persona consistency, coherence, believability, task relevance, and scenario adherence.
 - Judge cost control: deterministic 1/8 roleplay rollout sampling, with neutral reward for unjudged samples.
 
-See [docs/training_report.md](/home/xiang/NPC-RL/docs/training_report.md) for the full bilingual technical report.
+See [NPC-post-training/docs/training_report.md](NPC-post-training/docs/training_report.md) for the full bilingual technical report.
 
 ## Serving the Trained Model
 
@@ -180,7 +180,7 @@ Open [playable-demo/index.html](/home/xiang/NPC-RL/playable-demo/index.html) aft
 
 ## Agent Harness
 
-The harness lives in `agents/npc_harness/` and is deliberately small:
+The harness lives in `NPC-agent/npc_harness/` and is deliberately small:
 
 - `engine.py`: two-phase turn engine where the model is invoked.
 - `providers.py`: OpenAI-compatible provider for vLLM/SGLang/OpenAI-style APIs.
@@ -192,7 +192,7 @@ The harness lives in `agents/npc_harness/` and is deliberately small:
 CLI smoke test without GPU:
 
 ```bash
-python3 agents/npc_harness/examples/demo.py
+python3 NPC-agent/npc_harness/examples/demo.py
 ```
 
 Real-model CLI:
@@ -200,5 +200,5 @@ Real-model CLI:
 ```bash
 OPENAI_BASE_URL=http://localhost:8112/v1 \
 OPENAI_MODEL=outputs/grpo/qwen3_8b_task3/global_step_150/actor/huggingface_merged \
-python3 -m agents.npc_harness --context agents/npc_harness/examples/shopkeeper.yaml
+python3 -m npc_harness --context NPC-agent/npc_harness/examples/shopkeeper.yaml
 ```

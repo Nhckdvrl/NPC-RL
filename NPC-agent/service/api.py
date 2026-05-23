@@ -20,22 +20,22 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from agents.npc_harness.backend import GameBackend, KnowledgeGameBackend
-from agents.npc_harness.bus import InboundMessage, MessageBus
-from agents.npc_harness.engine import NpcTurnEngine
-from agents.npc_harness.loop import NpcAgentLoop
-from agents.npc_harness.npc_context import NpcContext, load_context
-from agents.npc_harness.providers import LLMProvider, LLMResponse, OpenAICompatProvider, ToolCallRequest
-from agents.npc_harness.sessions import SessionManager
-from agents.npc_harness.registry import ToolRegistry
-from agents.npc_harness.tools import GameTool, build_registry_from_context
+from npc_harness.backend import GameBackend, KnowledgeGameBackend
+from npc_harness.bus import InboundMessage, MessageBus
+from npc_harness.engine import NpcTurnEngine
+from npc_harness.loop import NpcAgentLoop
+from npc_harness.npc_context import NpcContext, load_context
+from npc_harness.providers import LLMProvider, LLMResponse, OpenAICompatProvider, ToolCallRequest
+from npc_harness.sessions import SessionManager
+from npc_harness.registry import ToolRegistry
+from npc_harness.tools import GameTool, build_registry_from_context
 
 
-DEFAULT_CONTEXT = ROOT / "agents" / "npc_harness" / "examples" / "shopkeeper.yaml"
+DEFAULT_CONTEXT = ROOT / "npc_harness" / "examples" / "shopkeeper.yaml"
 DEFAULT_WORKSPACE = Path(os.getenv("NPC_SERVICE_WORKSPACE", tempfile.gettempdir())) / "npc_service"
 
 
