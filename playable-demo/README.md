@@ -3,6 +3,8 @@
 A static browser demo for the FastAPI service in `../NPC-agent/service/api.py`.
 All demo-specific scenario content lives here:
 
+![Ravenhollow Armory playable demo](../assets/ravenhollow-armory-demo.png)
+
 - `scenarios/ravenhollow_armory.yaml` - NPC persona, game state, tool list, and item knowledge.
 - `index.html` / `styles.css` / `app.js` - browser UI, suggested prompts, tool trace panel, and runtime controls.
 

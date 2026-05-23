@@ -34,7 +34,7 @@ body {
   border-bottom: 1px solid var(--line);
   background:
     linear-gradient(90deg, rgba(10, 12, 10, 0.18), rgba(10, 12, 10, 0.92) 54%),
-    url("assets/ravenhollow-armory-hero.png");
+    url("../assets/ravenhollow-armory-hero.png");
   background-size: cover;
   background-position: center;
 }
