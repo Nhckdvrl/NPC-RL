@@ -1,7 +1,7 @@
 # Example NPC: a weapon-shop keeper.
 # Run (after serving the trained model with vLLM on :8112, see repo README):
 #   OPENAI_BASE_URL=http://localhost:8112/v1 OPENAI_MODEL=<served-model> \
-#   python -m agents.npc_harness --context agents/npc_harness/examples/shopkeeper.yaml
+#   python -m npc_harness --context NPC-agent/npc_harness/examples/shopkeeper.yaml
 
 name: Garrick
 provider: vllm

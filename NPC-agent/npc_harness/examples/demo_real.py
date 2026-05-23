@@ -13,7 +13,7 @@ Then run this script:
 
     OPENAI_BASE_URL=http://localhost:8112/v1 \\
     OPENAI_MODEL=<served-model-name> \\
-    python agents/npc_harness/examples/demo_real.py
+    python NPC-agent/npc_harness/examples/demo_real.py
 
 Type messages to the NPC, /quit to exit.
 """
@@ -27,11 +27,11 @@ import sys
 import tempfile
 from pathlib import Path
 
-_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
-from agents.npc_harness.app import build_provider, run_cli
+from npc_harness.app import build_provider, run_cli
 
 
 if __name__ == "__main__":

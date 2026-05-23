@@ -8,7 +8,7 @@ trained model's two-phase behavior with simple rules, so you can watch the
 toolcall -> execute -> roleplay pipeline end to end without a GPU.
 
 Run:
-    python agents/npc_harness/examples/demo.py
+    python NPC-agent/npc_harness/examples/demo.py
 """
 
 from __future__ import annotations
@@ -21,19 +21,19 @@ import sys
 import tempfile
 from pathlib import Path
 
-_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
-from agents.npc_harness.bus import InboundMessage, MessageBus
-from agents.npc_harness.backend import GameBackend, KnowledgeGameBackend
-from agents.npc_harness.engine import NpcTurnEngine
-from agents.npc_harness.loop import NpcAgentLoop
-from agents.npc_harness.npc_context import load_context
-from agents.npc_harness.providers import LLMProvider, LLMResponse, ToolCallRequest
-from agents.npc_harness.registry import ToolRegistry
-from agents.npc_harness.sessions import SessionManager
-from agents.npc_harness.tools import GameTool
+from npc_harness.bus import InboundMessage, MessageBus
+from npc_harness.backend import GameBackend, KnowledgeGameBackend
+from npc_harness.engine import NpcTurnEngine
+from npc_harness.loop import NpcAgentLoop
+from npc_harness.npc_context import load_context
+from npc_harness.providers import LLMProvider, LLMResponse, ToolCallRequest
+from npc_harness.registry import ToolRegistry
+from npc_harness.sessions import SessionManager
+from npc_harness.tools import GameTool
 
 
 # --------------------------------------------------------------------------- model stub

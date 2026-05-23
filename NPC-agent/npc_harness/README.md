@@ -17,7 +17,7 @@ The harness faithfully mirrors this contract. Each phase uses a separate prompt;
 ## Package layout
 
 ```
-agents/npc_harness/
+NPC-agent/npc_harness/
 ├── bus.py            MessageBus + Inbound/OutboundMessage (asyncio.Queue pair)
 ├── providers.py      LLMProvider (abstract) + OpenAICompatProvider (openai SDK)
 ├── registry.py       Tool (abstract) + ToolRegistry
@@ -44,7 +44,7 @@ agents/npc_harness/
 ### Offline demo (no GPU)
 
 ```bash
-python agents/npc_harness/examples/demo.py
+python NPC-agent/npc_harness/examples/demo.py
 ```
 
 Runs the full harness pipeline with a rule-based stub standing in for the trained model. No GPU or vLLM required.
@@ -97,7 +97,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 vllm serve \
 ```bash
 OPENAI_BASE_URL=http://localhost:8112/v1 \
 OPENAI_MODEL=outputs/grpo/qwen3_8b_task3/global_step_150/actor/huggingface_merged \
-python -m agents.npc_harness --context agents/npc_harness/examples/shopkeeper.yaml
+python -m npc_harness --context NPC-agent/npc_harness/examples/shopkeeper.yaml
 ```
 
 Type messages at the `You>` prompt; `/quit` to exit.

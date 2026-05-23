@@ -7,7 +7,7 @@ Builds two distinct message lists per player turn:
     the model to stay in roleplay mode and skip tool calls.
   * Phase 3 (roleplay): full conversation history + injected tool results.
 
-Ported and cleaned from ``agents/openai_agent/message_constructor.py``.
+Ported and cleaned from the original openai_agent message_constructor.
 """
 
 from __future__ import annotations

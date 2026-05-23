@@ -4,7 +4,7 @@ Connects MessageBus, OpenAICompatProvider (pointed at the vLLM server), SessionM
 NpcTurnEngine, NpcAgentLoop, and CliChannel into a runnable interactive NPC session.
 
     OPENAI_BASE_URL=http://localhost:8112/v1 OPENAI_MODEL=<served-model> \\
-    python -m agents.npc_harness --context agents/npc_harness/examples/shopkeeper.yaml
+    python -m npc_harness --context NPC-agent/npc_harness/examples/shopkeeper.yaml
 """
 
 from __future__ import annotations

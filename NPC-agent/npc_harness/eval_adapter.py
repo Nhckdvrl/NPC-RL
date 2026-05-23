@@ -1,12 +1,10 @@
 """Evaluator-compatible adapter.
 
-Implements the same ``generate_functions_and_responses(...)`` contract as
-``agents/openai_agent/main_agent.py`` so the existing pipeline can score the harness.
+Implements the same ``generate_functions_and_responses(...)`` contract as the original
+openai_agent so the existing evaluation pipeline can score the harness.
 Drives the async two-phase engine on a persistent event loop, and routes Phase-2 execution
 through the *provided* gold ``executor`` (wrapped in ``GoldGameBackend``) so tool calls are
 recorded for F1 exactly as before.
-
-Enable via ``HARNESS=npc`` in ``agents/user_config.py``.
 """
 
 from __future__ import annotations

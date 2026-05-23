@@ -11,10 +11,10 @@ from __future__ import annotations
 import copy
 from typing import Any, Dict, List, Union
 
-try:  # only needs `typing`; safe to import eagerly
-    from agents.tool_builder import build_all_tools
+try:
+    from .tool_builder import build_all_tools
 except ImportError:  # pragma: no cover
-    from ..tool_builder import build_all_tools  # type: ignore
+    build_all_tools = None  # type: ignore
 
 from .backend import GameBackend
 from .registry import Tool, ToolRegistry

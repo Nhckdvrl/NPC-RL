@@ -2,7 +2,7 @@
 
 This folder is the serving layer for the trained NPC-RL model.
 
-- `../agents/npc_harness/` contains the core two-phase agent runtime.
+- `npc_harness/` contains the core two-phase agent runtime.
 - `service/api.py` exposes that runtime through FastAPI for a playable browser demo or game-client prototype.
 - The LLM backend is an OpenAI-compatible endpoint, typically vLLM serving the merged SFT/GRPO checkpoint.
 
