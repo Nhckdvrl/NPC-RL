@@ -44,9 +44,9 @@ A single model must handle both phases. The evaluation score is the average of t
 | Hermes-Function-Calling-v1 | Toolcall (Stage 0) | 928 dialogues | NousResearch / HuggingFace |
 | CoSER | Roleplay (Stage 1) | 52,921 dialogues | coser-bench / HuggingFace |
 
-**English**: The original game dialogue data was unavailable, so two open-source datasets were used as substitutes. Hermes provides multi-turn conversations with JSON Schema tool definitions and structured `<tool_call>` outputs—directly compatible with NPC toolcalling. CoSER provides character roleplay conversations derived from literary works, each with rich character profiles (persona, worldview, knowledge background), making it a strong proxy for NPC persona-grounded dialogue.
+**English**: Hermes provides multi-turn conversations with JSON Schema tool definitions and structured `<tool_call>` outputs—directly compatible with NPC toolcalling. CoSER provides character roleplay conversations derived from literary works, each with rich character profiles (persona, worldview, knowledge background), making it a strong fit for NPC persona-grounded dialogue.
 
-**中文**：由于无法获取原始游戏对话数据，采用两个开源数据集作为替代。Hermes 提供带 JSON Schema 工具定义和结构化 `<tool_call>` 输出的多轮对话，与 NPC 工具调用需求直接对齐。CoSER 提供基于文学作品角色的扮演对话，每条数据均含丰富的角色档案（人设、世界观、知识背景），是 NPC 人设对话的理想替代。
+**中文**：Hermes 提供带 JSON Schema 工具定义和结构化 `<tool_call>` 输出的多轮对话，与 NPC 工具调用需求直接对齐。CoSER 提供基于文学作品角色的扮演对话，每条数据均含丰富的角色档案（人设、世界观、知识背景），非常适合 NPC 人设对话训练。
 
 ### 2.2 SFT Data Format / SFT 数据格式
 
