@@ -203,5 +203,13 @@ if should_start_vllm():
 else:
     print("GPU is not enabled in aicrowd.json, using api configuration")
 
-# Set the UserAgent to use OpenAI
-UserAgent = OpenAIAgent
+# Select the harness. Default keeps the existing competition agent; set HARNESS=npc
+# to use the two-phase NPC harness adapter.
+if os.getenv("HARNESS", "").lower() == "npc":
+    try:
+        from agents.npc_harness.eval_adapter import NPCHarnessAgent
+    except ImportError:
+        from .npc_harness.eval_adapter import NPCHarnessAgent
+    UserAgent = NPCHarnessAgent
+else:
+    UserAgent = OpenAIAgent
