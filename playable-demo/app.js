@@ -22,7 +22,10 @@ const prompts = [
 
 let sessionId = localStorage.getItem("npc-demo-session") || makeSessionId();
 localStorage.setItem("npc-demo-session", sessionId);
-apiUrl.value = `${location.protocol}//${location.hostname || "localhost"}:8120/api/chat`;
+apiUrl.value =
+  location.port === "5173"
+    ? `${location.protocol}//${location.hostname || "localhost"}:8120/api/chat`
+    : `${location.origin}/api/chat`;
 
 for (const prompt of prompts) {
   const button = document.createElement("button");

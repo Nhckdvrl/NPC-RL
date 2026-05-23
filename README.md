@@ -1,4 +1,4 @@
-# NPC-RL: Post-Training an LLM Game NPC Agent
+![NPC-RL: Post-Training an LLM Game NPC Agent](docs/assets/npc-rl-title.png)
 
 NPC-RL is a game-NLP research project for post-training a single LLM to act as an interactive NPC: it learns when to call game-state tools, how to format those calls, and how to speak back in character after the game backend returns results.
 
