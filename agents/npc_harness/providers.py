@@ -73,7 +73,10 @@ class OpenAICompatProvider(LLMProvider):
             messages=messages,
             max_tokens=max_tokens,
             temperature=temperature,
+            extra_body={"chat_template_kwargs": {"enable_thinking": False}},
         )
+        if "top_p" in kwargs and kwargs["top_p"] is not None:
+            kw["top_p"] = kwargs["top_p"]
         if tools:
             kw["tools"] = tools
             kw["tool_choice"] = tool_choice or "auto"

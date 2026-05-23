@@ -54,7 +54,15 @@ class NpcAgentLoop:
         self.sessions.save(session)
 
         await self.bus.publish_outbound(
-            OutboundMessage(channel=msg.channel, chat_id=msg.chat_id, content=reply)
+            OutboundMessage(
+                channel=msg.channel,
+                chat_id=msg.chat_id,
+                content=reply,
+                metadata={
+                    "functions": result.get("functions", []),
+                    "tool_results": result.get("tool_results", []),
+                },
+            )
         )
 
     async def run(self) -> None:

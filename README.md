@@ -1,70 +1,89 @@
-# NPC-RL
+# NPC-RL: Post-Training an LLM Game NPC Agent
 
-A post-training framework for game NPC dialogue models. Trains a single LLM to simultaneously handle **tool-calling** (querying game state) and **roleplay** (generating in-character responses), using SFT cold-start followed by GRPO reinforcement learning.
+NPC-RL is a game-NLP research project for post-training a single LLM to act as an interactive NPC: it learns when to call game-state tools, how to format those calls, and how to speak back in character after the game backend returns results.
 
-## Overview
+The main contribution is the post-training pipeline: SFT cold start followed by GRPO reinforcement learning on a combined tool-calling and roleplay objective. The repository also includes an agent harness, vLLM/FastAPI serving path, and a small playable web demo so the trained checkpoint can be shown as an end-to-end prototype.
 
-Game NPCs need two capabilities in one turn:
-1. **Toolcall** — decide which game APIs to invoke (inventory lookup, quest status, etc.) and format the call correctly
-2. **Roleplay** — generate a contextually appropriate, persona-consistent NPC reply after receiving tool results
+## Why This Fits Game NLP / LLM R&D
 
-This repo trains a single Qwen3-8B model to do both, evaluated by toolcall F1 and an LLM judge.
+This project is shaped around the kind of work described in an NLP Research Intern role for a game R&D team:
 
-**Training results (Qwen3-8B, 150 GRPO steps):**
+- Research contribution: designs and evaluates a post-training recipe for game NPC dialogue with both tool use and narrative roleplay.
+- LLM training: fine-tunes Qwen3-8B with SFT and optimizes it with GRPO using task-specific rewards.
+- Prototype to product path: wraps the trained model in a two-phase agent harness and exposes it through vLLM + FastAPI for a browser-playable demo.
+- Game-tech relevance: treats game APIs, inventory/quest state, persona grounding, latency budgets, and live backend seams as first-class design constraints.
+
+## Results
+
+Qwen3-8B, trained for 150 GRPO steps after SFT cold start:
 
 | Stage | Toolcall F1 | Roleplay score | Combined |
-|-------|------------|----------------|----------|
+| --- | ---: | ---: | ---: |
 | SFT baseline | 0.32 | 0.52 | 0.42 |
 | After GRPO | **0.86** | **0.53** | **0.69** |
 
-## Project Structure
+## Repository Map
 
-```
+The root keeps the original runnable training paths stable, while the new top-level folders present the project as a complete research-to-demo package. `NPC-post-training/` and `NPC-agent/` use lightweight links back to the original code so old commands and imports keep working.
+
+```text
 NPC-RL/
-├── configs/
-│   ├── run_grpo.sh          # GRPO launch script
-│   ├── sft_qwen3_8b.yaml    # SFT config (LLaMA-Factory)
-│   ├── grpo_qwen3_8b.yaml   # GRPO config (verl)
-│   └── ds_z2.json           # DeepSpeed ZeRO-2 config
-├── data/
-│   ├── dataset_info.json    # LLaMA-Factory dataset registry
-│   ├── raw/                 # Raw source data (CoSER + Hermes)
-│   ├── sft/                 # SFT training data (ShareGPT format)
-│   └── verl/                # GRPO training data (Parquet format)
-├── src/
-│   ├── reward_score/        # verl reward package (toolcall F1 + LLM judge)
-│   ├── data_transform/      # Data conversion scripts
-│   ├── dataset_gather/      # Dataset download scripts
-│   ├── toolcall_syn/        # Toolcall data synthesis (via LLM API)
-│   └── verl_reward.py       # verl reward entrypoint
+├── NPC-post-training/       # Research/training entrypoint with configs/data/src/eval links
+├── NPC-agent/               # Harness + FastAPI serving entrypoint
+├── playable-demo/           # Static browser demo for the served NPC
+├── configs/                 # SFT, GRPO, DeepSpeed configs
+├── data/                    # Dataset registry and raw/processed data locations
+├── src/                     # Data transforms, reward functions, synthesis, analysis
 ├── agents/
-│   └── openai_agent/        # Inference agent (vLLM + OpenAI-compatible API)
-├── eval/                    # Evaluation scripts (toolcall F1 + LLM judge)
-└── outputs/                 # Training checkpoints (gitignored)
+│   ├── npc_harness/         # Two-phase NPC runtime
+│   └── openai_agent/        # Earlier OpenAI-compatible inference agent
+├── function_calls/          # Game tool/action stubs and registries
+├── eval/                    # Toolcall/roleplay evaluation
+├── docs/training_report.md  # Detailed bilingual training report
+└── outputs/                 # Checkpoints, gitignored
 ```
+
+## System Design
+
+Each player turn follows the contract used during training:
+
+```text
+player utterance + tool schemas
+        │
+        ▼
+Phase 1: toolcall model pass
+        │  Hermes/OpenAI tool call JSON
+        ▼
+Phase 2: game backend execution
+        │  inventory / quest / state results
+        ▼
+Phase 3: roleplay model pass
+        │
+        ▼
+short in-character NPC reply
+```
+
+The trained model is not buried in a web UI. It is called in `agents/npc_harness/engine.py` through `OpenAICompatProvider` in `agents/npc_harness/providers.py`, which points at a vLLM OpenAI-compatible endpoint.
 
 ## Setup
 
-### Requirements
-- 4× GPU with ≥40GB VRAM (tested on 4×RTX PRO 6000 Blackwell)
-- CUDA ≥ 12.8 (Blackwell requires sm_120)
-- Python 3.11+
+Requirements:
 
-### Environment
+- Python 3.11+
+- CUDA-capable GPUs for training; the reported run used 4x RTX PRO 6000 Blackwell
+- CUDA 12.8 for Blackwell-class GPUs
 
 ```bash
 conda create -n npc-rl python=3.11 -y
 conda activate npc-rl
 
-# PyTorch — use cu128 for Blackwell, adjust for your CUDA version
 pip install torch --index-url https://download.pytorch.org/whl/cu128
-
 pip install -r requirements.txt
-pip install verl          # GRPO trainer
-pip install flash-attn    # optional speedup
+pip install verl
+pip install flash-attn
 ```
 
-### Base Model
+Download the base model:
 
 ```bash
 huggingface-cli download Qwen/Qwen3-8B --local-dir /path/to/qwen3_8b
@@ -72,99 +91,114 @@ huggingface-cli download Qwen/Qwen3-8B --local-dir /path/to/qwen3_8b
 
 ## Data Preparation
 
-### Source Data
-
-| Dataset | Task | Source |
-|---------|------|--------|
-| [Hermes-Function-Calling-v1](https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1) | Toolcall (Stage 0) | HuggingFace |
-| [CoSER](https://huggingface.co/datasets/coser-bench/CoSER) | Roleplay (Stage 1) | HuggingFace |
-
-Download and place under `data/raw/`.
-
-### Build Training Data
+| Dataset | Task | Use |
+| --- | --- | --- |
+| Hermes-Function-Calling-v1 | Tool calling | Cold-start tool-call format and API selection |
+| CoSER | Roleplay | Persona-grounded NPC dialogue |
 
 ```bash
-# Stage 0: toolcall (from Hermes)
-python src/data_transform/build_stage0_from_hermes.py \
+python3 src/data_transform/build_stage0_from_hermes.py \
   --input data/raw/hermes_func-calling.json \
   --output data/sft/stage_0.json
 
-# Stage 1: roleplay (from CoSER)
-python src/data_transform/build_stage1_from_coser.py \
+python3 src/data_transform/build_stage1_from_coser.py \
   --input_dir data/raw/coser/full \
   --output data/sft/stage_1.json
 
-# Merge into stage_all.json for SFT
-python src/data_transform/merge_and_tag_data.py
+python3 src/data_transform/merge_and_tag_data.py
 
-# Convert to Parquet for GRPO
-python src/data_transform/convert_to_json_parquet.py \
+python3 src/data_transform/convert_to_json_parquet.py \
   --files data/sft/stage_0.json data/sft/stage_1.json \
   --output_dir data/verl
 ```
 
 ## Training
 
-### Stage 1: SFT Cold Start
-
-Uses [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory).
+SFT cold start with LLaMA-Factory:
 
 ```bash
-# Edit configs/sft_qwen3_8b.yaml to set model_name_or_path
 FORCE_TORCHRUN=1 llamafactory-cli train configs/sft_qwen3_8b.yaml
 ```
 
-Key settings: full-parameter fine-tuning, DeepSpeed ZeRO-2, `qwen3_nothink` template (thinking disabled), lr=1e-5, ~2 epochs.
-
-### Stage 2: GRPO Reinforcement Learning
-
-Uses [verl](https://github.com/volcengine/verl).
+GRPO reinforcement learning with verl:
 
 ```bash
-# Toolcall only — rule-based reward, zero API cost (recommended first run)
 SFT_CKPT=/path/to/sft/checkpoint bash configs/run_grpo.sh toolcall 150
-
-# Full — toolcall F1 + LLM judge reward (requires judge API key)
 SFT_CKPT=/path/to/sft/checkpoint bash configs/run_grpo.sh full 150
 ```
 
-**LLM Judge setup** (required for `full` mode):
+Reward design:
+
+- `npc/toolcall`: rule-based F1 over exact `(function_name, parameters)` matches.
+- `npc/roleplay`: LLM judge score from 0 to 1 over persona consistency, coherence, believability, task relevance, and scenario adherence.
+- Judge cost control: deterministic 1/8 roleplay rollout sampling, with neutral reward for unjudged samples.
+
+See [docs/training_report.md](/home/xiang/NPC-RL/docs/training_report.md) for the full bilingual technical report.
+
+## Serving the Trained Model
+
+Yes: the trained model can be served directly with vLLM, then wrapped by FastAPI for game/demo traffic.
+
+Merge the verl FSDP checkpoint to HuggingFace format:
 
 ```bash
-mkdir -p ~/.config/npc-rl
-cat > ~/.config/npc-rl/judge.env << 'EOF'
-JUDGE_BASE_URL=https://api.deepseek.com
-JUDGE_API_KEY=your_api_key
-JUDGE_MODEL=deepseek-chat
-JUDGE_TIMEOUT=30
-EOF
-chmod 600 ~/.config/npc-rl/judge.env
+python3 -m verl.model_merger merge \
+  --backend fsdp \
+  --local_dir outputs/grpo/qwen3_8b_task3/global_step_150/actor \
+  --target_dir outputs/grpo/qwen3_8b_task3/global_step_150/actor/huggingface_merged
 ```
 
-Key GRPO settings:
-- Algorithm: GRPO, group size n=8
-- KL penalty: `low_var_kl`, coef=0.001
-- Judge sampling: 1/8 roleplay rollouts (87.5% cost reduction)
-- 4-GPU FSDP actor + vLLM rollout (colocate)
-
-## Reward Function
-
-`src/reward_score/` implements the two-source reward:
-
-| Source | Reward | Method |
-|--------|--------|--------|
-| `npc/toolcall` | F1 of exact tool-call matches | Rule-based |
-| `npc/roleplay` | LLM judge score (0–1) | DeepSeek API, 1/8 sampling |
-
-## Inference
+Serve the merged checkpoint:
 
 ```bash
-# Serve the trained model via vLLM
-python -m vllm.entrypoints.openai.api_server \
-  --model outputs/grpo/qwen3_8b_full/global_step_150 \
-  --enable-auto-tool-choice --tool-call-parser hermes \
-  --port 8112
+CUDA_VISIBLE_DEVICES=0,1,2,3 vllm serve \
+  outputs/grpo/qwen3_8b_task3/global_step_150/actor/huggingface_merged \
+  --port 8112 \
+  --tensor-parallel-size 4 \
+  --tool-call-parser hermes \
+  --enable-auto-tool-choice \
+  --max-model-len 4096
+```
 
-# Use the agent
-OPENAI_BASE_URL=http://localhost:8112/v1 python agents/openai_agent/main_agent.py
+Start the NPC API:
+
+```bash
+OPENAI_BASE_URL=http://localhost:8112/v1 \
+OPENAI_MODEL=outputs/grpo/qwen3_8b_task3/global_step_150/actor/huggingface_merged \
+python3 -m uvicorn --app-dir NPC-agent service.api:app --host 0.0.0.0 --port 8120
+```
+
+No-GPU smoke test:
+
+```bash
+NPC_PROVIDER=scripted python3 -m uvicorn --app-dir NPC-agent service.api:app --host 0.0.0.0 --port 8120
+```
+
+## Playable Demo
+
+Open [playable-demo/index.html](/home/xiang/NPC-RL/playable-demo/index.html) after starting the FastAPI service, or serve it with `python3 -m http.server 5173 -d playable-demo`. Demo-specific content lives under `playable-demo/`, including `scenarios/ravenhollow_armory.yaml`. The page lets you choose vLLM or scripted smoke-test mode, adjust generation settings, chat with the NPC, and inspect tool traces returned by the agent service.
+
+## Agent Harness
+
+The harness lives in `agents/npc_harness/` and is deliberately small:
+
+- `engine.py`: two-phase turn engine where the model is invoked.
+- `providers.py`: OpenAI-compatible provider for vLLM/SGLang/OpenAI-style APIs.
+- `backend.py`: swappable game-state execution seam.
+- `tools.py`: converts game function registries into OpenAI tool schemas.
+- `sessions.py`: JSONL persistence for chat sessions.
+- `eval_adapter.py`: drop-in adapter for evaluator integration.
+
+CLI smoke test without GPU:
+
+```bash
+python3 agents/npc_harness/examples/demo.py
+```
+
+Real-model CLI:
+
+```bash
+OPENAI_BASE_URL=http://localhost:8112/v1 \
+OPENAI_MODEL=outputs/grpo/qwen3_8b_task3/global_step_150/actor/huggingface_merged \
+python3 -m agents.npc_harness --context agents/npc_harness/examples/shopkeeper.yaml
 ```

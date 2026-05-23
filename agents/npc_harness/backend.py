@@ -54,7 +54,8 @@ class KnowledgeGameBackend(GameBackend):
             return None
         target = str(target).strip().lower()
         for it in self.items:
-            if str(it.get("name", "")).strip().lower() == target:
+            names = [it.get("name", ""), *(it.get("aliases") or [])]
+            if any(str(name).strip().lower() == target for name in names):
                 return it
         return None
 
@@ -71,13 +72,22 @@ class KnowledgeGameBackend(GameBackend):
         qtype = str(params.get("item_type") or params.get("quest_level") or "").lower()
         qname = str(params.get("item_name") or params.get("quest_name") or "").lower()
         qdesc = str(params.get("item_description") or params.get("quest_description") or "").lower()
+        if "weapon" in qtype or "武器" in qtype:
+            qdesc = " ".join(p for p in [qdesc, qtype.replace("weapon", "").replace("武器", "")] if p).strip()
+            qtype = ""
+        if qtype in {"weapon", "weapons", "武器"} or qdesc in {"weapon", "weapons", "武器"}:
+            return [
+                {"name": it.get("name"), "reason": it.get("description", "")}
+                for it in self.items
+            ] or [{"information": "n/a"}]
         # Tokenise the name query so "light sword" can match partial item names/descriptions
         name_words = [w for w in qname.split() if len(w) > 2]
         desc_words = [w for w in qdesc.split() if len(w) > 2]
 
         results = []
         for it in self.items:
-            it_name = str(it.get("name", "")).lower()
+            aliases = " ".join(str(a) for a in (it.get("aliases") or []))
+            it_name = f"{it.get('name', '')} {aliases}".lower()
             it_type = str(it.get("type", "")).lower()
             it_desc = str(it.get("description", "")).lower()
             it_combined = it_name + " " + it_type + " " + it_desc

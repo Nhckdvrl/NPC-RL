@@ -15,6 +15,8 @@ from __future__ import annotations
 import json
 from typing import Any, Dict, List
 
+from .memory import extract_memory, render_memory
+
 
 def _history_messages(dialogue: List[Dict[str, Any]]) -> List[Dict[str, str]]:
     out = []
@@ -49,12 +51,29 @@ def _results_block(tool_results: List[Dict[str, Any]]) -> str:
         name = func.get("name", "unknown")
         params = func.get("parameters", {})
         returns = func.get("return", [])
-        # n/a returns mean "the action succeeded / nothing to report"
-        if isinstance(returns, list) and returns == [{"information": "n/a"}]:
+        # Action tools often return no payload; query tools should keep n/a visible.
+        if (
+            isinstance(returns, list)
+            and returns == [{"information": "n/a"}]
+            and not (name.startswith("check") or name.startswith("search"))
+        ):
             returns = [{"status": "success"}]
         lines.append(f"- {name}({json.dumps(params, ensure_ascii=False)}) -> "
                      f"{json.dumps(returns, ensure_ascii=False)}")
     return "\n".join(lines)
+
+
+def _tool_result_instruction(tool_results: List[Dict[str, Any]]) -> str:
+    names = {str(r.get("name", "")) for r in tool_results or []}
+    if any(n.startswith("search") for n in names):
+        return "The player is asking for options or recommendations. Mention matching item names and short reasons from the current search results. Do not mention prices unless prices are present in the current tool results."
+    if "check_price" in names:
+        return "The player is asking for price. State the exact current price."
+    if "check_attack" in names:
+        return "The player is asking about attack or damage. State the exact current attack value."
+    if "check_description" in names or "check_basic_info" in names:
+        return "The player is asking for details. Summarize the current item description and relevant facts from the current tool result."
+    return "Use the current tool results directly."
 
 
 # The Qwen3 chat template auto-injects the tools block when tools= is passed to the API.
@@ -81,16 +100,43 @@ You are an NPC in a video game, talking with a player. Stay fully in character.
 # Current State
 {current_state}
 
+# Conversation Memory
+{memory}
+
 # The player you are talking to
 {role}
 
-{results}
-
 ## Instructions
-- Reply in character as the NPC above, using the gathered information and current situation.
+- Reply in character as the NPC above, using the current turn's tool results when present.
+- Use conversation memory for direct references such as the player's name or "it / that one / 多少呢".
+- If the player previously told you their name and later asks who they are or asks for "the name" in that context, answer with the player's name from memory.
+- If the player asks for an exact factual value such as price, attack, type, level, reward, or duration, include the exact value from the tool result.
 - Reference only the provided knowledge, tool results, and state. Do not invent facts.
+- Reply in the same language as the player's latest message unless the player asks otherwise.
 - Keep the reply short and natural.
 Return only the NPC's spoken reply."""
+
+
+CURRENT_TURN_WITH_RESULTS = """\
+Latest player message (reply in {language}):
+{player_text}
+
+Current turn tool results:
+{results}
+
+Current turn answer policy:
+{tool_instruction}
+
+Answer the player's latest message using the current tool results above. Current turn tool results override older conversation history."""
+
+
+CURRENT_TURN = """\
+Latest player message (reply in {language}):
+{player_text}"""
+
+
+def _language_hint(text: str) -> str:
+    return "Chinese" if any("\u4e00" <= ch <= "\u9fff" for ch in text) else "English"
 
 
 class NpcContextBuilder:
@@ -105,7 +151,16 @@ class NpcContextBuilder:
         )
         if not last_player:
             return []
-        return [{"role": "user", "content": last_player.get("text", "")}]
+        memory = extract_memory(ctx, dialogue[:-1])
+        if memory:
+            content = (
+                "Conversation memory for resolving references only:\n"
+                f"{render_memory(memory)}\n\n"
+                f"Player says:\n{last_player.get('text', '')}"
+            )
+        else:
+            content = last_player.get("text", "")
+        return [{"role": "user", "content": content}]
 
     def build_roleplay_messages(
         self,
@@ -114,13 +169,41 @@ class NpcContextBuilder:
         tool_results: List[Dict[str, Any]],
     ) -> List[Dict[str, Any]]:
         knowledge = ctx.knowledge or {}
+        memory = extract_memory(ctx, dialogue)
         system = ROLEPLAY_SYSTEM.format(
             npc_info=_kv_block(ctx.persona),
             general_knowledge=knowledge.get("general_info") or "N/A",
             item_knowledge=_item_block(knowledge.get("knowledge_info", [])),
             worldview=ctx.worldview or "N/A",
             current_state=_kv_block(ctx.state),
+            memory=render_memory(memory),
             role=ctx.role or "An adventurer.",
-            results=_results_block(tool_results),
         )
-        return [{"role": "system", "content": system.strip()}, *_history_messages(dialogue)]
+        current_player = next(
+            (t for t in reversed(dialogue or []) if t.get("speaker") == "player"), None
+        )
+        prior_dialogue = list(dialogue or [])
+        if current_player and prior_dialogue and prior_dialogue[-1] is current_player:
+            prior_dialogue = prior_dialogue[:-1]
+
+        messages = [{"role": "system", "content": system.strip()}, *_history_messages(prior_dialogue)]
+        player_text = current_player.get("text", "") if current_player else ""
+        if tool_results:
+            messages.append({
+                "role": "user",
+                "content": CURRENT_TURN_WITH_RESULTS.format(
+                    language=_language_hint(player_text),
+                    player_text=player_text,
+                    results=_results_block(tool_results),
+                    tool_instruction=_tool_result_instruction(tool_results),
+                ).strip(),
+            })
+        elif player_text:
+            messages.append({
+                "role": "user",
+                "content": CURRENT_TURN.format(
+                    language=_language_hint(player_text),
+                    player_text=player_text,
+                ).strip(),
+            })
+        return messages

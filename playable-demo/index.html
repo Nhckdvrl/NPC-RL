@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NPC-RL Playable Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero" aria-label="Ravenhollow armory">
+        <div class="hero__art" aria-hidden="true">
+          <div class="rain r1"></div>
+          <div class="rain r2"></div>
+          <div class="sign">Garrick's Armory</div>
+          <div class="lantern"></div>
+        </div>
+        <div class="hero__copy">
+          <p class="kicker">NPC-RL playable prototype</p>
+          <h1>Ravenhollow Armory</h1>
+          <p>Negotiate with a post-trained NPC that can query tools, inspect inventory, and reply in character.</p>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="left">
+          <div class="panel settings">
+            <h2>Runtime</h2>
+            <label>
+              API
+              <input id="apiUrl" value="http://localhost:8120/api/chat" />
+            </label>
+            <label>
+              Scenario
+              <input id="contextPath" value="playable-demo/scenarios/ravenhollow_armory.yaml" />
+            </label>
+            <div class="row">
+              <label>
+                Provider
+                <select id="provider">
+                  <option value="vllm">vLLM checkpoint</option>
+                  <option value="scripted">Scripted smoke test</option>
+                </select>
+              </label>
+              <label>
+                Reply tokens
+                <input id="replyTokens" type="number" min="16" max="512" value="110" />
+              </label>
+            </div>
+            <label>
+              Temperature <output id="tempValue">0.7</output>
+              <input id="temperature" type="range" min="0" max="1.5" step="0.1" value="0.7" />
+            </label>
+            <button id="resetBtn" type="button">New Session</button>
+          </div>
+
+          <div class="panel compact">
+            <h2>Scene State</h2>
+            <dl>
+              <div><dt>Time</dt><dd>Rainy late afternoon</dd></div>
+              <div><dt>Goal</dt><dd>Prepare for Ashfen Marsh</dd></div>
+              <div><dt>NPC</dt><dd>Garrick Voss, retired caravan guard</dd></div>
+            </dl>
+          </div>
+
+          <div class="panel compact">
+            <h2>Tools</h2>
+            <ul class="tools">
+              <li>search_item</li>
+              <li>check_price</li>
+              <li>check_attack</li>
+              <li>check_description</li>
+              <li>sell</li>
+              <li>equip</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="chat" aria-label="NPC chat">
+          <div id="messages" class="messages" aria-live="polite">
+            <article class="message npc">
+              <span>Garrick</span>
+              <p>Rain's getting worse. If you're heading into Ashfen tonight, choose steel that will not betray your hand.</p>
+            </article>
+          </div>
+          <div class="suggestions" id="suggestions"></div>
+          <form id="chatForm" class="composer">
+            <input id="messageInput" autocomplete="off" placeholder="I need a light weapon for the marsh..." />
+            <button type="submit">Send</button>
+          </form>
+        </section>
+
+        <aside class="right">
+          <div class="panel">
+            <h2>Inventory</h2>
+            <div class="inventory">
+              <article><b>Short Sword</b><span>500G · ATK 30 · beginner</span></article>
+              <article><b>Long Bow</b><span>900G · ATK 45 · ranged</span></article>
+              <article><b>Battle Axe</b><span>1500G · ATK 75 · heavy</span></article>
+              <article><b>Avis Wind</b><span>2000G · ATK 60 · rare</span></article>
+              <article><b>Marsh Pike</b><span>800G · ATK 48 · reach</span></article>
+            </div>
+          </div>
+          <div class="panel">
+            <h2>Tool Trace</h2>
+            <pre id="trace">No tool calls yet.</pre>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
