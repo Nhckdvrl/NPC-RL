@@ -4,14 +4,18 @@ NPC-RL is a game-NLP research project for post-training a single LLM to act as a
 
 The main contribution is the post-training pipeline: SFT cold start followed by GRPO reinforcement learning on a combined tool-calling and roleplay objective. The repository also includes an agent harness, vLLM/FastAPI serving path, and a small playable web demo so the trained checkpoint can be shown as an end-to-end prototype.
 
-## Why This Fits Game NLP / LLM R&D
+## Why This Fits Game NLP
 
-This project is shaped around the kind of work described in an NLP Research Intern role for a game R&D team:
+This project focuses on building a believable and controllable LLM-driven NPC system for interactive game worlds, combining structured action generation, long-horizon dialogue consistency, and lightweight agent-style decision making.
 
-- Research contribution: designs and evaluates a post-training recipe for game NPC dialogue with both tool use and narrative roleplay.
-- LLM training: fine-tunes Qwen3-8B with SFT and optimizes it with GRPO using task-specific rewards.
-- Prototype to product path: wraps the trained model in a two-phase agent harness and exposes it through vLLM + FastAPI for a browser-playable demo.
-- Game-tech relevance: treats game APIs, inventory/quest state, persona grounding, latency budgets, and live backend seams as first-class design constraints.
+Key aspects of the project include:
+
+- Designing a post-training pipeline for game NPC dialogue that balances narrative roleplay, world-state awareness, and reliable tool/action execution.
+- Fine-tuning Qwen3-8B with supervised instruction tuning and GRPO-based reinforcement learning using custom rewards tied to dialogue quality, action validity, and state consistency.
+- Building a two-stage interaction framework where the model first reasons over game context and memory, then emits structured in-game actions through a constrained JSON interface.
+- Deploying the system with vLLM and FastAPI to support real-time inference and a browser-playable demo connected to simulated game systems such as quests, inventory, and NPC memory.
+
+The project explores how modern LLM post-training techniques can support more immersive, persistent, and interactive NPC behavior while remaining practical for real-time game deployment.
 
 ## Results
 
