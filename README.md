@@ -1,6 +1,6 @@
 ![NPC-RL: Post-Training an LLM Game NPC Agent](assets/npc-rl-title.png)
 
-> **⚠️ Archived with post-mortem.** This project is preserved as-is together with an honest audit of its design failures (data curation, GRPO reward design, evaluation methodology, task framing) — see [POSTMORTEM.md](POSTMORTEM.md). It is superseded by a new agentic-RL project built on the RAGEN-2 (ICML 2026 Oral) recipe.
+> **⚠️ Archived with post-mortem.** This project is preserved as-is together with an honest audit of its design failures (data curation, GRPO reward design, evaluation methodology, task framing) — see [POSTMORTEM.md](POSTMORTEM.md).
 
 NPC-RL is a game-NLP research project for post-training a single LLM to act as an interactive NPC: it learns when to call game-state tools, how to format those calls, and how to speak back in character after the game backend returns results.
 
