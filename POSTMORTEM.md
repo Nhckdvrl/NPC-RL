@@ -49,18 +49,6 @@
    - transformers 5.x → 4.57.6 降级后 `tokenizer_config.json` 的 `extra_special_tokens` 格式不兼容；
    - 多 worker 下 reward dict 插入顺序不一致导致 `DataProto.concat` AssertionError（固定 key 序修复）。
 
-## 6. 教训 → 后继项目的硬约束
-
-1. 从具体场景/问题出发；任务必须对任何现代模型都有提升空间（不许靠"挑没学过的模型"制造提升）。
-2. 必须是真 agentic：多轮环境交互闭环，奖励来自环境状态；训练时模型必须真的在环境里行动。
-3. 数据从源头构建/生成：生成参数可控、可解性验证、去重、难度分层、比例有依据；监督目标是完整决策轨迹。
-4. 奖励 100% 规则可验证；零 LLM-as-judge、零常数填充；GRPO 同组同初始状态，监控组内方差与零方差组占比。
-5. 评测：固定 held-out 集 + 全阶段基线（base/SFT/RL/外部模型）+ 多 seed + 配对显著性检验；不同量纲指标不合成；训练 reward 与终评指标异源。
-6. 全程 wandb；每个设计/参数选择写明理由；照抄成熟顶会 recipe，先复现后增量。
-7. 单次训练数小时、全部实验 ≤2 天（4×96GB 预算内）。
-
-后继项目基于 RAGEN-2（ICML 2026 Oral）recipe：程序化生成的游戏环境、种子不相交划分、纯规则奖励、组内方差监控作为一级训练信号——与本项目的失败恰好构成同一概念的正反两面。
-
 ---
 
 *Audited and written at archive time, 2026-07. All file references are to this repository's final state.*
