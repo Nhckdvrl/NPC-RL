@@ -1,8 +1,6 @@
 # NPC-RL Post-mortem / 项目复盘
 
-> **EN abstract** — This repository is preserved as-is, together with an honest audit of its failures. NPC-RL trained Qwen3-8B (SFT → GRPO on verl, 4× RTX PRO 6000 Blackwell) for game-NPC tool-calling + roleplay. Toolcall F1 rose 0.32 → 0.86, but the project fails on four levels: (1) data used raw with zero curation and a 1.7%/98.3% task mixture; (2) the roleplay reward filled 7/8 of GRPO rollouts with a constant 0.5, destroying the within-group variance that GRPO's advantage depends on; (3) evaluation had no baselines, no variance/significance, and reused the training judge (Goodhart circularity); (4) the task itself was single-turn format imitation presented as an agentic project — the model never interacted with the environment during RL. The successor project applies the lessons below on a RAGEN-2 (ICML 2026 Oral) recipe with procedurally generated game environments and purely rule-based rewards.
->
-> 本文档是对本项目的关键审计，写于项目封存之时（2026-07）。所有问题均附代码位置，可直接核对。
+> 本文档是对本项目的最终审计，写于项目封存之时（2026-07-27）。所有问题均附代码位置，可直接核对。
 
 ---
 
