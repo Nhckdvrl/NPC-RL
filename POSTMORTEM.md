@@ -49,4 +49,4 @@
 
 ---
 
-*Audited and written at archive time, 2026-07. All file references are to this repository's final state.*
+*Audited and written at archive time, 2026-07-27. All file references are to this repository's final state.*
